@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex justify-between items-center h-16">
               <Link href="/">
                 <Image
-                  src="/sanook50_15x5_transparent.png"
+                  src="/sanook50_15x6_barckground.svg"
                   alt="Sanook50"
                   width={150}
                   height={50}
