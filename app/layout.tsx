@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/career" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>Career</Link>
                 <Link href="/about" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>About</Link>
               </div>
-              <button className="text-white px-5 py-2 rounded-full text-sm font-medium transition-colors hover:opacity-90" style={{ backgroundColor: '#C4622D' }}>
+              <button className="px-5 py-2 rounded-full text-sm font-medium transition-colors hover:opacity-90" style={{ backgroundColor: '#FAF4EC', color: '#C4622D' }}>
                 Join Community
               </button>
             </div>
