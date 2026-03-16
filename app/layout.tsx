@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={geist.className}>
-        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#3B2A1A' }}>
+        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#C4622D' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link href="/">
