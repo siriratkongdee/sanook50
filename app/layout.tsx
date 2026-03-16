@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={geist.className}>
-        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#FAF4EC', borderBottom: '1px solid #e8ddd0' }}>
+        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#C4622D' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link href="/">
@@ -28,10 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
               </Link>
               <div className="hidden md:flex space-x-8">
-                <Link href="/health" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#3B2A1A' }}>Health</Link>
-                <Link href="/finance" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#3B2A1A' }}>Finance</Link>
-                <Link href="/career" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#3B2A1A' }}>Career</Link>
-                <Link href="/about" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#3B2A1A' }}>About</Link>
+                <Link href="/health" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>Health</Link>
+                <Link href="/finance" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>Finance</Link>
+                <Link href="/career" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>Career</Link>
+                <Link href="/about" className="font-medium transition-opacity hover:opacity-70" style={{ color: '#FAF4EC' }}>About</Link>
               </div>
               <button className="text-white px-5 py-2 rounded-full text-sm font-medium transition-colors hover:opacity-90" style={{ backgroundColor: '#C4622D' }}>
                 Join Community
