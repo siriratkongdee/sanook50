@@ -38,25 +38,6 @@ export default function Home() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF4EC', color: '#3B2A1A' }}>
 
-      {/* Header */}
-      <header style={{ backgroundColor: '#FAF4EC', borderBottom: '1px solid #e8ddd0' }} className="sticky top-0 z-50 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <Image
-            src="/sanook50_15x5_transparent.png"
-            alt="Sanook50"
-            width={180}
-            height={60}
-            className="object-contain"
-          />
-          <nav className="hidden md:flex gap-8 font-medium" style={{ color: '#3B2A1A' }}>
-            <a href="/health" className="hover:opacity-70 transition-opacity">Health</a>
-            <a href="/finance" className="hover:opacity-70 transition-opacity">Finance</a>
-            <a href="/career" className="hover:opacity-70 transition-opacity">Career</a>
-            <a href="/about" className="hover:opacity-70 transition-opacity">About</a>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
