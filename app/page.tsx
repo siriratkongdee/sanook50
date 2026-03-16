@@ -141,7 +141,7 @@ export default function Home() {
       <footer className="py-12 text-white" style={{ backgroundColor: '#3B2A1A' }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <Image
-            src="/sanook50_15x5_transparent.png"
+            src="/sanook50_15x6_transparent.svg"
             alt="Sanook50"
             width={120}
             height={40}
