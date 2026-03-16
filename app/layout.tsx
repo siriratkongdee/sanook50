@@ -15,19 +15,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={geist.className}>
-        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#3B2A1A', borderBottom: 'none' }}>
+        <nav className="sticky top-0 z-50 shadow-sm" style={{ backgroundColor: '#3B2A1A' }}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link href="/">
-                <div style={{ backgroundColor: '#C4622D', borderRadius: '8px', padding: '4px 12px', display: 'inline-block' }}>
-                  <Image
-                    src="/sanook50_15x5_transparent.png"
-                    alt="Sanook50"
-                    width={140}
-                    height={47}
-                    className="object-contain"
-                  />
-                </div>
+                <Image
+                  src="/sanook50_15x5_transparent.png"
+                  alt="Sanook50"
+                  width={150}
+                  height={50}
+                  className="object-contain"
+                />
               </Link>
               <div className="hidden md:flex space-x-8">
                 <Link href="/health" className="font-medium transition-colors hover:opacity-70" style={{ color: '#FAF4EC' }}>Health</Link>
