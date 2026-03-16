@@ -19,13 +19,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <Link href="/">
-                <Image
-                  src="/sanook50_15x5_transparent.png"
-                  alt="Sanook50"
-                  width={160}
-                  height={54}
-                  className="object-contain"
-                />
+                <div style={{ backgroundColor: '#C4622D', borderRadius: '8px', padding: '4px 12px', display: 'inline-block' }}>
+                  <Image
+                    src="/sanook50_15x5_transparent.png"
+                    alt="Sanook50"
+                    width={140}
+                    height={47}
+                    className="object-contain"
+                  />
+                </div>
               </Link>
               <div className="hidden md:flex space-x-8">
                 <Link href="/health" className="font-medium transition-colors hover:opacity-70" style={{ color: '#3B2A1A' }}>Health</Link>
