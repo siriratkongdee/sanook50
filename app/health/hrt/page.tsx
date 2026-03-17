@@ -5,6 +5,7 @@ export default function HRTPost() {
     { color: '#D4A853', name: 'Andrew Huberman', role: 'Evidence points to yes, personalize it', text: 'Huberman consistently platforms pro-HRT experts. Work with a menopause-literate doctor, test your hormones early, and do not wait until you are in crisis.' },
     { color: '#C4622D', name: 'Rhonda Patrick', role: 'Lifestyle first, HRT as part of the picture', text: 'Not anti-HRT, but she emphasizes nutrition, inflammation control, and mitochondrial health should run alongside any hormone intervention. Fix the foundation first.' },
     { color: '#9b59b6', name: 'Dr. Louise Newson', role: 'The HRT champion', text: 'UK-based menopause specialist. The risks have been overstated, the benefits are underappreciated, and women deserve better information.' },
+    { color: '#e74c8b', name: 'Dr. Vonda Wright', role: 'Orthopedic surgeon — the muscle and bone case for HRT', text: 'Double board-certified orthopedic surgeon who coined the term musculoskeletal syndrome of menopause. She argues HRT can reduce heart disease risk by 40-50% and all-cause mortality by 20-40% when started at the right time. She literally sat before the FDA in 2025 advocating for better access to estrogen therapy for women.' },
   ];
   const cautious = [
     { name: 'Breast Cancer Survivors', text: 'Most oncologists still advise caution for women with a history of estrogen receptor-positive breast cancer. If you have had breast cancer, this decision needs deep conversation with your oncologist.' },
