@@ -74,6 +74,35 @@ export default function HRTPost() {
             ))}
           </div>
 
+
+          <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>The Other Side: Who Should Be Cautious</h2>
+          <p className="mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
+            Balance matters. Not every expert is fully pro-HRT, and some women genuinely should not use it. Here's the honest picture:
+          </p>
+
+          {[
+            { name: 'Breast Cancer Survivors', concern: 'Most oncologists still advise caution for women with a history of estrogen receptor-positive breast cancer. While some integrative oncologists like Dr. Jenn Simmons argue the data shows hormones can be safe after breast cancer, this remains actively debated. If you've had breast cancer, this decision needs deep conversation with your oncologist — not just a menopause specialist.' },
+            { name: 'Diana Zuckerman (National Center for Health Research)', concern: 'A vocal critic of the FDA's 2025 decision to remove "Black Box" warnings from HRT. She argues that risks of breast cancer, stroke, pulmonary embolism, gallbladder disease, and ovarian cancer still warrant strong warnings for some patients.' },
+            { name: 'Dr. Adriane Fugh-Berman (Georgetown University)', concern: 'Argues that the risk of invasive breast cancer is significantly increased with certain HRT formulations and progresses over time. She believes the softening of warnings moves too fast ahead of the evidence.' },
+            { name: 'Integrative Medicine Practitioners', concern: 'Many naturopathic doctors emphasize lifestyle-first approaches — diet, movement, stress reduction, herbal support — before or alongside hormones. Their concern isn't that HRT is dangerous, but that it's sometimes prescribed without addressing root causes.' },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
+              <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>{item.name}</div>
+              <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85 }}>{item.concern}</p>
+            </div>
+          ))}
+
+          <div className="rounded-xl p-6 mb-8" style={{ backgroundColor: '#fff8f0', border: '1px solid #D4A853' }}>
+            <p className="font-semibold mb-2" style={{ color: '#D4A853' }}>⚠️ Absolute contraindications — HRT is generally NOT recommended if you have:</p>
+            <ul className="space-y-2" style={{ color: '#3B2A1A' }}>
+              {['History of hormone-sensitive breast or endometrial cancer', 'Active liver disease', 'Unexplained vaginal bleeding', 'History of blood clots or certain clotting disorders', 'Recent stroke or heart attack'].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span>•</span><span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Take</h2>
           <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
             <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
