@@ -1,11 +1,12 @@
 export default function About() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF4EC' }}>
-      <div className="py-16" style={{ backgroundColor: '#7D9B76' }}>
+      {/* Header */}
+      <div className="py-16" style={{ backgroundColor: '#FAF4EC', borderBottom: '4px solid #7D9B76' }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">🐾</div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">About Sanook50</h1>
-          <p className="text-xl max-w-2xl mx-auto text-white opacity-90">The story behind why this exists</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#3B2A1A' }}>About Sanook50</h1>
+          <p className="text-xl max-w-2xl mx-auto" style={{ color: '#7D9B76' }}>The story behind why this exists</p>
         </div>
       </div>
 
@@ -21,18 +22,21 @@ export default function About() {
           <p className="text-lg mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
             Sanook50 exists because I got tired of content that was either too clinical, too generic, or just plain wrong. I watch the experts — Peter Attia, Mary Claire Haver, Rhonda Patrick and more — and translate what they say into practical guidance for real women in their 50s.
           </p>
-          <p className="text-lg mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
+          <p className="text-lg mb-8" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
             I'm not a doctor. I'm a smart friend who did the homework.
           </p>
-          <div className="mt-10 pt-8 border-t" style={{ borderColor: '#e8ddd0' }}>
+          <div className="pt-8 border-t" style={{ borderColor: '#e8ddd0' }}>
             <h3 className="text-xl font-bold mb-4" style={{ color: '#3B2A1A' }}>What you'll find here</h3>
             <ul className="space-y-3">
               {[
-                "🌿 Health & Menopause — real research, practical takeaways",
-                "✨ Financial Planning — building your second chapter with confidence",
-                "🌸 Career & Purpose — reinventing yourself on your own terms",
+                { emoji: "🌿", color: '#7D9B76', text: "Health & Menopause — real research, practical takeaways" },
+                { emoji: "✨", color: '#D4A853', text: "Financial Planning — building your second chapter with confidence" },
+                { emoji: "🌸", color: '#C4622D', text: "Career & Purpose — reinventing yourself on your own terms" },
               ].map((item, i) => (
-                <li key={i} className="text-lg" style={{ color: '#3B2A1A' }}>{item}</li>
+                <li key={i} className="flex items-center gap-3 text-lg" style={{ color: '#3B2A1A' }}>
+                  <span className="text-2xl">{item.emoji}</span>
+                  <span>{item.text}</span>
+                </li>
               ))}
             </ul>
           </div>
