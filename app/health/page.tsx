@@ -14,8 +14,8 @@ export default function Health() {
       <div className="py-16 text-white" style={{ backgroundColor: '#7D9B76' }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">🌿</div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Health & Menopause</h1>
-          <p className="text-xl max-w-2xl mx-auto opacity-90">We watch the experts so you don't have to — then tell you what it means for your life.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#3B2A1A' }}>Health &amp; Menopause</h1>
+          <p className="text-xl max-w-2xl mx-auto" style={{ color: '#3B2A1A', opacity: 0.8 }}>We watch the experts so you don't have to — then tell you what it means for your life.</p>
         </div>
       </div>
 
