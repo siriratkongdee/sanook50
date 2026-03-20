@@ -22,7 +22,7 @@ export default function HRTPost() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="text-xs font-semibold px-3 py-1 rounded-full inline-block mb-6" style={{ backgroundColor: '#FAF4EC', color: '#7D9B76', border: '1px solid #7D9B76' }}>Hormones</span>
           <h1 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#3B2A1A' }}>Should I Try HRT? What the Experts Say (And What I Actually Think)</h1>
-          <p className="text-lg" style={{ color: '#3B2A1A', opacity: 0.7 }}>By Sirirat Kongdee · March 2026 · 10 min read</p>
+          <p className="text-lg" style={{ color: '#3B2A1A', opacity: 0.7 }}>By Siri · March 2026 · 10 min read</p>
         </div>
       </div>
       <div className="max-w-3xl mx-auto px-4 py-16">
