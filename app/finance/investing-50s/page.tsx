@@ -9,51 +9,52 @@ export default function Investing50sPage() {
         </div>
       </div>
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <p className="text-xl mb-8 font-medium" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>The conventional wisdom says: get more conservative as you age. Shift to bonds. Reduce risk. But if you are 50 with a 5-year runway to semi-retirement and potentially 35+ more years of life, that advice may actually hurt you. Here is how I think about investing at this stage.</p>
+        <p className="text-xl mb-8 font-medium" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>Everything you learned about investing in your 30s and 40s still applies — but the context has shifted. You have less time to recover from big losses. You also have more capital, more clarity on your goals, and (hopefully) fewer financial surprises. Here is how I think about investing with a 5-year semi-retirement target.</p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>The Problem With Conventional Wisdom</h2>
-        <p className="mb-6" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>The old rule — subtract your age from 100 to get your stock allocation — was designed when people retired at 65 and lived to 75. A 10-year retirement. Today, a 50-year-old woman can expect to live into her late 80s. That is a 35-40 year horizon. Going too conservative too early means your money does not grow fast enough to last.</p>
+        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>The Core Shift: From Accumulation to Preservation + Growth</h2>
+        <p className="mb-6" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>In your 30s, you could ride out a 50% market crash — you had decades to recover. In your 50s, a 50% crash right before you semi-retire is a serious problem. The goal is not to stop growing your money. It is to grow it while managing the sequence-of-returns risk that can derail early retirement.</p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>The Core-Satellite Framework</h2>
-        <p className="mb-4" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>I organize my investments into two buckets:</p>
+        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>The Framework I Use</h2>
 
-        <div className="rounded-xl p-6 mb-4" style={{ backgroundColor: "white", border: "1px solid #e8ddd0" }}>
-          <div className="font-bold text-xl mb-2" style={{ color: "#7D9B76" }}>Core (60-70%)</div>
-          <p className="mb-3" style={{ color: "#3B2A1A", lineHeight: "1.7" }}>Low-cost, diversified index funds. S&P 500, total market, international. Set it and forget it. This is your foundation — boring and effective.</p>
-          <div className="text-sm px-3 py-2 rounded-lg" style={{ backgroundColor: "#f0f7f0", color: "#3B2A1A" }}>Examples: VTI, QQQM, VOO, VT</div>
-        </div>
-
-        <div className="rounded-xl p-6 mb-8" style={{ backgroundColor: "white", border: "1px solid #e8ddd0" }}>
-          <div className="font-bold text-xl mb-2" style={{ color: "#D4A853" }}>Satellites (30-40%)</div>
-          <p className="mb-3" style={{ color: "#3B2A1A", lineHeight: "1.7" }}>Targeted bets on sectors or companies you have conviction in. Higher risk, higher potential reward. Each position sized so a 50% loss does not derail your plan.</p>
-          <div className="text-sm px-3 py-2 rounded-lg" style={{ backgroundColor: "#fff8f0", color: "#3B2A1A" }}>Examples: Sector ETFs (ITA for defense), individual stocks with strong thesis (SOFI), thematic plays (AI infrastructure)</div>
-        </div>
-
-        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>What Changes at 50</h2>
         {[
-          { title: "Sequence of returns matters more", body: "A market crash at 55 hurts more than one at 40. You have less time to recover. Keep 1-2 years of expenses in cash or short-term bonds as a buffer — so you never sell equities when they are down." },
-          { title: "Tax efficiency becomes critical", body: "At 50, every dollar you keep is a dollar that compounds. Use tax-advantaged accounts first (401k, Roth IRA, HSA). Hold bonds in tax-advantaged, growth stocks in taxable accounts." },
-          { title: "Catch-up contributions kick in", body: "At 50, the IRS allows extra 401k and IRA contributions. Max them. This is free tax-advantaged space — use every dollar of it for the next 5 years." },
-          { title: "Healthcare is a real line item", body: "Model your healthcare costs explicitly in your plan. Pre-Medicare years (55-65) can cost $6,000-15,000/year depending on your coverage. This changes the math significantly." },
-        ].map((item, i) => (
-          <div key={i} className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: "white", borderLeftColor: "#D4A853" }}>
-            <div className="font-bold text-lg mb-2" style={{ color: "#D4A853" }}>{item.title}</div>
-            <p style={{ color: "#3B2A1A", lineHeight: "1.7" }}>{item.body}</p>
+          { bucket: "Core (60-70%)", color: "#7D9B76", desc: "Boring index funds. S&P 500, total market, international. This is your foundation. Set it, forget it, rebalance annually. The goal here is not to beat the market — it is to not underperform it." },
+          { bucket: "Growth Satellites (20-30%)", color: "#D4A853", desc: "Concentrated bets with real conviction. Defense ETFs (ITA), specific sectors, individual stocks you have researched. Enough to move the needle, not enough to sink you if one goes wrong." },
+          { bucket: "Income Layer (10%)", color: "#C4622D", desc: "Dividend stocks, covered calls, cash-secured puts. Generate income from your portfolio now. Even $200-400/month from options premiums compounds meaningfully over 5 years." },
+        ].map((b, i) => (
+          <div key={i} className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: "white", borderLeftColor: b.color }}>
+            <div className="font-bold text-lg mb-2" style={{ color: b.color }}>{b.bucket}</div>
+            <p style={{ color: "#3B2A1A", lineHeight: "1.7" }}>{b.desc}</p>
           </div>
         ))}
 
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>The Mistakes I See Most Often</h2>
+        <div className="rounded-xl p-6 mb-8" style={{ backgroundColor: "#fff8f0", border: "1px solid #D4A853" }}>
+          {[
+            "Going too conservative too early — staying in cash or bonds loses to inflation over 5 years",
+            "Chasing performance — buying what went up last year, missing what will go up next",
+            "Ignoring tax efficiency — wrong assets in wrong account types costs real money",
+            "Not having a healthcare plan — this is the retirement expense nobody budgets for correctly",
+            "Waiting for the perfect entry point — time in market beats timing the market",
+          ].map((m, i) => (
+            <div key={i} className="flex gap-3 mb-3"><span style={{ color: "#D4A853" }}>⚡</span><p style={{ color: "#3B2A1A" }}>{m}</p></div>
+          ))}
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>What I Actually Own</h2>
+        <p className="mb-6" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>I hold QQQM (Nasdaq 100 — tech and growth), ITA (aerospace and defense — bought during a market dip when geopolitical tensions increased defense spending), and use cash-secured puts to build positions in stocks I want to own at better prices. I am not a financial advisor and this is not advice — it is just what I do and why.</p>
+
         <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>My Take</h2>
         <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: "#FAF4EC", border: "2px solid #C4622D" }}>
-          <p style={{ color: "#3B2A1A", lineHeight: "1.8" }}>I am staying primarily in equities until at least 55. Not because I am reckless — but because my time horizon is 35 years, not 10. I use the core-satellite approach: boring index funds as my foundation, a few targeted bets where I have real conviction. The wheel strategy generates income on my satellite holdings. And I keep enough cash to sleep at night without selling when markets drop.</p>
+          <p style={{ color: "#3B2A1A", lineHeight: "1.8" }}>The best investing decision in your 50s is not a stock pick. It is having a written plan — your target number, your asset allocation, your rebalancing rules — and following it when markets get scary. Most people make their worst investing decisions when they are emotional. A plan made in calm prevents decisions made in panic.</p>
         </div>
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "#D4A853" }}>
           <h3 className="text-xl font-bold mb-3" style={{ color: "#3B2A1A" }}>One Thing to Do This Week</h3>
-          <p style={{ color: "#3B2A1A" }}>Look at your current allocation. What percentage is in index funds vs. individual stocks vs. bonds? If you do not know, find out. Clarity is the first step to a plan that actually works.</p>
+          <p style={{ color: "#3B2A1A" }}>Write down your asset allocation. What percentage is in stocks vs bonds vs cash? Does it match your actual risk tolerance and timeline? If you have not done this recently, now is the time.</p>
         </div>
 
         <div className="mt-12 pt-8 border-t" style={{ borderColor: "#e8ddd0" }}>
-          <p className="text-sm" style={{ color: "#3B2A1A", opacity: 0.5 }}>Disclaimer: I am not a financial advisor. This is personal research and experience, not financial advice.</p>
+          <p className="text-sm" style={{ color: "#3B2A1A", opacity: 0.5 }}>Disclaimer: I am not a financial advisor. This is personal experience and research, not financial advice. Please consult a qualified financial planner.</p>
         </div>
       </div>
     </div>

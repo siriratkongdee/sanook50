@@ -1,8 +1,8 @@
 export default function Health() {
   const articles = [
     { title: "Should I Try HRT? What the Experts Actually Say", excerpt: "I watched 8 hours of podcasts from Peter Attia, Mary Claire Haver & Rhonda Patrick so you don't have to. Here's the honest breakdown.", emoji: "🌿", tag: "Hormones", href: "/health/hrt" },
-    { title: "The Syndrome Nobody Told You About: Musculoskeletal Changes at Menopause", excerpt: "Over 70% of midlife women experience joint pain, muscle loss and bone changes — and it has a name. Here's what the science says.", emoji: "💪", tag: "Body", href: "/health/msm" },
-    { title: "Red Light Therapy at 50: My BQ90 Pro Protocol and What the Research Says", excerpt: "I started red light therapy and here is my routine, the science behind it, and what I am tracking month by month.", emoji: "🔴", tag: "Wellness", href: "/health/red-light" },
+    { title: "Why Your Body Feels Different at 50: The Syndrome Nobody Told You About", excerpt: "Over 70% of midlife women experience joint pain, muscle loss and bone changes during menopause. It has a name — and knowing that changes everything.", emoji: "💪", tag: "Body", href: "/health/msm" },
+    { title: "Red Light Therapy at 50: My BQ90 Pro Protocol and What the Science Says", excerpt: "I started red light therapy and here is my exact routine, the science behind each phase, and what I have noticed in the first 3 weeks.", emoji: "🔴", tag: "Wellness", href: "/health/red-light" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Health() {
               <span className="text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: "#FAF4EC", color: "#7D9B76" }}>{article.tag}</span>
               <h2 className="text-xl font-bold mb-3 mt-2" style={{ color: "#3B2A1A" }}>{article.title}</h2>
               <p style={{ color: "#3B2A1A", opacity: 0.7 }}>{article.excerpt}</p>
-              <p className="mt-4 font-medium hover:opacity-70" style={{ color: "#7D9B76" }}>Read more →</p>
+              <p className="mt-4 font-medium" style={{ color: "#7D9B76" }}>Read more →</p>
             </a>
           ))}
         </div>

@@ -1,8 +1,8 @@
 export default function Finance() {
   const articles = [
-    { title: "Semi-Retire at 55: The Math You Need to Know", excerpt: "Working backwards from your goal — how much do you actually need, and what's the realistic path to get there?", emoji: "🎯", tag: "Retirement", href: "/finance/semi-retire" },
-    { title: "The Wheel Strategy: Getting Paid While You Wait to Buy Stocks", excerpt: "Selling cash-secured puts is one of the smartest income strategies if you want to own a stock anyway. Here's how it works.", emoji: "🎡", tag: "Options", href: "/finance/wheel-strategy" },
-    { title: "Investing in Your 50s: Different Rules Apply", excerpt: "The risk/reward calculus changes after 50. Here's how to think about growth vs. protection with 5-10 years to retirement.", emoji: "📊", tag: "Investing", href: "/finance/investing-50s" },
+    { title: "Semi-Retire at 55: The Math You Need to Know", excerpt: "Working backwards from your goal — how much do you actually need, and what is the realistic path to get there in 5 years.", emoji: "🎯", tag: "Retirement", href: "/finance/semi-retire" },
+    { title: "The Wheel Strategy: Getting Paid While You Wait to Buy Stocks", excerpt: "Selling cash-secured puts is one of the smartest income strategies if you want to own a stock anyway. Here is how it works.", emoji: "🎡", tag: "Options", href: "/finance/wheel-strategy" },
+    { title: "Investing in Your 50s: Different Rules Apply", excerpt: "The risk and reward calculus changes after 50. Here is the framework I use with a 5-year semi-retirement target.", emoji: "📊", tag: "Investing", href: "/finance/investing-50s" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Finance() {
               <span className="text-xs font-semibold px-3 py-1 rounded-full mb-3 inline-block" style={{ backgroundColor: "#FAF4EC", color: "#D4A853" }}>{article.tag}</span>
               <h2 className="text-xl font-bold mb-3 mt-2" style={{ color: "#3B2A1A" }}>{article.title}</h2>
               <p style={{ color: "#3B2A1A", opacity: 0.7 }}>{article.excerpt}</p>
-              <p className="mt-4 font-medium hover:opacity-70" style={{ color: "#D4A853" }}>Read more →</p>
+              <p className="mt-4 font-medium" style={{ color: "#D4A853" }}>Read more →</p>
             </a>
           ))}
         </div>
