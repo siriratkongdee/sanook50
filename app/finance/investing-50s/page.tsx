@@ -1,6 +1,10 @@
 export default function Investing50sPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF4EC" }}>
+
+      <div className="max-w-3xl mx-auto px-4 pt-8">
+        <a href="/finance" className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70" style={{ color: "#D4A853" }}>← Back to Finance</a>
+      </div>
       <div className="py-16" style={{ backgroundColor: "#FAF4EC", borderBottom: "4px solid #D4A853" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="text-xs font-semibold px-3 py-1 rounded-full inline-block mb-6" style={{ backgroundColor: "#FAF4EC", color: "#D4A853", border: "1px solid #D4A853" }}>Investing</span>
