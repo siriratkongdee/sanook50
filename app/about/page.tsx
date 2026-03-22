@@ -40,6 +40,18 @@ export default function About() {
               ))}
             </ul>
           </div>
+
+          <div className="mt-8 pt-8 border-t" style={{ borderColor: '#e8ddd0' }}>
+            <p className="text-sm mb-2" style={{ color: '#3B2A1A', opacity: 0.6, lineHeight: '1.7' }}>
+              <strong>A small note on how this works:</strong>
+            </p>
+            <p className="text-sm mb-2" style={{ color: '#3B2A1A', opacity: 0.6, lineHeight: '1.7' }}>
+              The research, writing, and content on this site is created in collaboration with Sanook, my personal AI agent — built on OpenClaw and powered by Claude. Sanook does the research, drafts the content, and helps me think things through. I review, shape, and add my own experience and perspective to everything you read here.
+            </p>
+            <p className="text-sm" style={{ color: '#3B2A1A', opacity: 0.6, lineHeight: '1.7', fontStyle: 'italic' }}>
+              This is what AI-assisted work actually looks like in 2026. Not replacing the human voice — amplifying it.
+            </p>
+          </div>
         </div>
       </div>
     </div>
