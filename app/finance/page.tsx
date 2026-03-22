@@ -1,5 +1,6 @@
 export default function Finance() {
   const articles = [
+    { title: "Why Women 50+ Are Most Exposed to AI Disruption — and What to Do About It", excerpt: "AI is not coming for factory workers first. It is coming for mid-career knowledge workers with high salaries and specialized skills. Here is the honest threat assessment — and the financial moves that create resilience.", emoji: "🤖", tag: "AI + Career", href: "/finance/ai-disruption" },
     { title: "The Retirement Readiness Checklist: Where Do You Actually Stand?", excerpt: "Most women 50+ have no clear picture of where they stand. Here is the honest framework to assess your situation — and what to do about the gaps.", emoji: "📋", tag: "Planning", href: "/finance/readiness-checklist" },
     { title: "The Semi-Retirement Math: Working Backwards From Your Number", excerpt: "How much do you actually need? The 4% rule, the healthcare gap, and the real calculation most retirement tools get wrong.", emoji: "🎯", tag: "Retirement", href: "/finance/semi-retire" },
     { title: "The Wheel Strategy: Getting Paid While You Wait to Buy Stocks", excerpt: "If you want to own a stock anyway, why not collect income while waiting for your price? A practical options strategy for non-traders.", emoji: "🎡", tag: "Options", href: "/finance/wheel-strategy" },
@@ -14,7 +15,7 @@ export default function Finance() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">✨</div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: "#3B2A1A" }}>Financial Planning</h1>
-          <p className="text-xl max-w-2xl mx-auto" style={{ color: "#D4A853" }}>Smart money moves for women building their second chapter.</p>
+          <p className="text-xl max-w-2xl mx-auto" style={{ color: "#D4A853" }}>AI is reshaping careers faster than anyone expected. Women 50+ are uniquely exposed — and uniquely positioned to prepare financially. Here is how.</p>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 py-16">
