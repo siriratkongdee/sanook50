@@ -83,7 +83,14 @@ export default function AiProofSkillsPage() {
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "#C4622D" }}>
           <h3 className="text-xl font-bold mb-3 text-white">One Thing to Do This Week</h3>
-          <p className="text-white opacity-90">Choose one task from your job that takes more than an hour per week. Write a detailed prompt for it — specific, structured, with clear output format. Run it with Claude or ChatGPT. That is prompt engineering. That is your first AI skill. Build from there.</p>
+          <p className="text-white opacity-90 mb-4">Choose one task from your job that takes more than an hour per week. Write a detailed prompt for it — specific, structured, with clear output format. Run it with Claude or ChatGPT. That is prompt engineering. That is your first AI skill. Build from there.</p>
+          <a href="/career/ai-team">
+            <button className="px-8 py-3 rounded-full font-bold hover:opacity-90" style={{ backgroundColor: "#FAF4EC", color: "#C4622D" }}>See How I Built My AI Team →</button>
+          </a>
+        </div>
+
+        <div className="mt-12 pt-8 border-t" style={{ borderColor: "#e8ddd0" }}>
+          <p className="text-sm" style={{ color: "#3B2A1A", opacity: 0.5 }}>Disclaimer: AI tools evolve quickly. This reflects the state of AI productivity tools as of early 2026. Always verify current capabilities before committing to a workflow.</p>
         </div>
       </div>
     </div>

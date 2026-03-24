@@ -30,7 +30,7 @@ export default function WhatIf() {
       title: "What If You Live to 95?",
       emoji: "🎂",
       color: "#D4A853",
-      why: "The average woman who reaches 65 today has a 50% chance of living past 87 and a meaningful chance of reaching 90+. Most retirement calculators default to age 85. Planning to age 85 when you live to 95 means running out of money at the worst possible time.",
+      why: "A 65-year-old woman today has an average life expectancy of about 86 — and a 1-in-3 chance of reaching 90+. Most retirement calculators default to age 85. Planning to age 85 when you live to 95 means running out of money at the worst possible time.",
       theNumbers: "Using a 4% withdrawal rate, a $1M portfolio lasts approximately 30 years — to age 95 if you retire at 65. But if you retire at 60, you need that $1M to last 35 years, which pushes your safe withdrawal rate closer to 3.5%. Every year earlier you retire, add 5-7 years to your required portfolio lifespan.",
       whatToDoNow: [
         "Plan to at least age 90, ideally 95. Use 30-35 year retirement horizons, not 20-25",
@@ -43,8 +43,8 @@ export default function WhatIf() {
       title: "What If Healthcare Costs Spike?",
       emoji: "🏥",
       color: "#C4622D",
-      why: "Healthcare inflation consistently outpaces general inflation. If you retire before 65, you face 3-5 years of private market healthcare costs. Even after Medicare, out-of-pocket costs for a couple average over $300,000 over a retirement lifetime.",
-      theNumbers: "A 60-year-old woman on an ACA marketplace plan in a mid-cost state might pay $700-$900/month in premiums plus $3,000-$6,000 in deductibles and out-of-pocket costs annually. A serious illness or hospitalization in the gap years could cost $20,000-$50,000 even with insurance. Add dental, vision, and hearing (not covered by traditional Medicare) and costs compound further.",
+      why: "Healthcare inflation consistently outpaces general inflation. If you retire before 65, you face 3-5 years of private market healthcare costs. Even after Medicare, out-of-pocket costs for a couple average $345,000 over a retirement lifetime (Fidelity 2025 estimate) — and that excludes long-term care.",
+      theNumbers: "The enhanced ACA subsidies expired at the end of 2025 — 2026 premiums rose 18-20%. A 60-year-old woman on an unsubsidized Silver plan now pays $800-$1,400/month in premiums depending on state, plus $3,000-$7,000 in deductibles and out-of-pocket costs annually. If you qualify for subsidies (income below ~$62K/year), costs drop significantly — but you must plan your retirement income around that threshold. A serious illness or hospitalization could cost $20,000-$50,000 even with insurance. Add dental, vision, and hearing (not covered by traditional Medicare) and costs compound further.",
       whatToDoNow: [
         "Build a healthcare line item into your retirement budget, not a vague estimate",
         "Research your ACA options now — your income in retirement affects premiums dramatically",

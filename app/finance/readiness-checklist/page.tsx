@@ -40,7 +40,7 @@ export default function ReadinessChecklist() {
         { label: "I have at least 1-2 years of living expenses in cash or equivalents", done: false },
         { label: "I have researched long-term care insurance or have a self-insurance plan", done: false },
         { label: "I have a will, healthcare proxy, and beneficiaries updated in the last 3 years", done: false },
-        { label: "My Social Security strategy accounts for longevity — the average woman lives to 87", done: false },
+        { label: "My Social Security strategy accounts for longevity — a 65-year-old woman today lives to 86 on average, and 1 in 3 live past 90", done: false },
       ],
     },
     {
@@ -49,7 +49,7 @@ export default function ReadinessChecklist() {
       items: [
         { label: "I know the tax treatment of each of my accounts (pre-tax vs. Roth vs. taxable)", done: false },
         { label: "I have a plan for which accounts to draw from first in retirement", done: false },
-        { label: "I have considered Roth conversions before 72 when RMDs kick in", done: false },
+        { label: "I have considered Roth conversions before RMDs kick in — at 73 for most, or 75 if you were born in 1960 or later (SECURE 2.0)", done: false },
         { label: "I understand how Social Security benefits are taxed based on income level", done: false },
       ],
     },

@@ -103,7 +103,14 @@ export default function AiCrosshairsPage() {
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "#C4622D" }}>
           <h3 className="text-xl font-bold mb-3 text-white">One Thing to Do This Week</h3>
-          <p className="text-white opacity-90">Pick one task you do regularly at work and do it with AI assistance. Time yourself before and after. The result will tell you everything about where your energy should go next.</p>
+          <p className="text-white opacity-90 mb-4">Pick one task you do regularly at work and do it with AI assistance. Time yourself before and after. The result will tell you everything about where your energy should go next.</p>
+          <a href="/career/ai-proof-skills">
+            <button className="px-8 py-3 rounded-full font-bold hover:opacity-90" style={{ backgroundColor: "#FAF4EC", color: "#C4622D" }}>Build the Skills That Keep You Safe →</button>
+          </a>
+        </div>
+
+        <div className="mt-12 pt-8 border-t" style={{ borderColor: "#e8ddd0" }}>
+          <p className="text-sm" style={{ color: "#3B2A1A", opacity: 0.5 }}>Disclaimer: I am not a financial advisor or employment attorney. This is personal research and experience, not career or financial advice. Individual situations vary.</p>
         </div>
       </div>
     </div>

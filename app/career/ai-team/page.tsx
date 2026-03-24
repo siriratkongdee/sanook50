@@ -85,7 +85,14 @@ export default function AiTeamPage() {
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "#C4622D" }}>
           <h3 className="text-xl font-bold mb-3 text-white">One Thing to Do This Week</h3>
-          <p className="text-white opacity-90">Write a prompt for one task you do every week. Make it specific — include the output format, the tone, the constraints. Run it. See what comes back. That is your first workflow.</p>
+          <p className="text-white opacity-90 mb-4">Write a prompt for one task you do every week. Make it specific — include the output format, the tone, the constraints. Run it. See what comes back. That is your first workflow.</p>
+          <a href="/career/ai-proof-skills">
+            <button className="px-8 py-3 rounded-full font-bold hover:opacity-90" style={{ backgroundColor: "#FAF4EC", color: "#C4622D" }}>See the Full AI Skills Framework →</button>
+          </a>
+        </div>
+
+        <div className="mt-12 pt-8 border-t" style={{ borderColor: "#e8ddd0" }}>
+          <p className="text-sm" style={{ color: "#3B2A1A", opacity: 0.5 }}>Disclaimer: AI tools evolve quickly. Tool names and capabilities mentioned may have changed. This reflects my personal workflow as of early 2026.</p>
         </div>
       </div>
     </div>

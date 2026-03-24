@@ -18,6 +18,9 @@ export default function HRTPost() {
   const contra = ['History of hormone-sensitive breast or endometrial cancer','Active liver disease','Unexplained vaginal bleeding','History of blood clots or clotting disorders','Recent stroke or heart attack'];
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF4EC' }}>
+      <div className="max-w-3xl mx-auto px-4 pt-8">
+        <a href="/health" className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70" style={{ color: '#7D9B76' }}>← Back to Health</a>
+      </div>
       <div className="py-16" style={{ backgroundColor: '#FAF4EC', borderBottom: '4px solid #7D9B76' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="text-xs font-semibold px-3 py-1 rounded-full inline-block mb-6" style={{ backgroundColor: '#FAF4EC', color: '#7D9B76', border: '1px solid #7D9B76' }}>Hormones</span>

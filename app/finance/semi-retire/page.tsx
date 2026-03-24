@@ -20,7 +20,7 @@ export default function SemiRetirePage() {
 
         <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>The 4% Rule — Your Starting Point</h2>
         <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: "white", border: "1px solid #e8ddd0" }}>
-          <p className="mb-4" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>The 4% rule says you can withdraw 4% of your portfolio annually without running out of money over 30 years. To find your number: multiply your annual expenses by 25.</p>
+          <p className="mb-4" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>The 4% rule says you can withdraw 4% of your portfolio annually without running out of money over 30 years. To find your number: multiply your annual expenses by 25. Note: many planners now recommend 3.5-3.7% for retirements longer than 30 years — especially if you are semi-retiring at 55 and your money needs to last 40 years. More conservative = multiply expenses by 27-29 instead.</p>
           <div className="rounded-lg p-4" style={{ backgroundColor: "#FAF4EC" }}>
             <p className="font-semibold mb-2" style={{ color: "#C4622D" }}>Example:</p>
             <p style={{ color: "#3B2A1A" }}>Annual expenses: $80,000</p>
@@ -33,7 +33,7 @@ export default function SemiRetirePage() {
 
         <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: "#C4622D" }}>The 5-Year Sprint Framework</h2>
         {[
-          { year: "Year 1 (Age 50)", action: "Maximize contributions — 401k, IRA, HSA. Know your exact number. Cut lifestyle inflation aggressively." },
+          { year: "Year 1 (Age 50)", action: "Maximize contributions — 401k, IRA, HSA. In 2026, the 401k catch-up limit for 50+ is $32,500 total ($24,500 + $8,000 catch-up). Know your exact number. Cut lifestyle inflation aggressively." },
           { year: "Year 2 (Age 51)", action: "Add taxable brokerage investing. Build 2-3 income streams beyond salary. Start tracking net worth monthly." },
           { year: "Year 3 (Age 52)", action: "Stress-test your plan. What happens if markets drop 30%? Optimize for tax efficiency." },
           { year: "Year 4 (Age 53)", action: "Transition planning. Begin reducing dependency on full-time income. Test semi-retirement lifestyle." },
@@ -46,7 +46,7 @@ export default function SemiRetirePage() {
         ))}
 
         <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>The Variable Nobody Talks About: Healthcare</h2>
-        <p className="mb-6" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>If you semi-retire before 65 (Medicare eligibility), you need to fund your own healthcare. This is often the biggest surprise. Budget $500-800/month per person for a marketplace plan, or $6,000-10,000/year. Add this to your expense calculation before anything else.</p>
+        <p className="mb-6" style={{ color: "#3B2A1A", lineHeight: "1.8" }}>If you semi-retire before 65 (Medicare eligibility), you need to fund your own healthcare. This is often the biggest surprise. The enhanced ACA subsidies that kept premiums artificially low expired at the end of 2025 — and 2026 marketplace rates jumped roughly 18-20%. For a 60-year-old on an unsubsidized Silver plan, budget $800-$1,400/month depending on your state and insurer. If your retirement income is low enough to qualify for subsidies (below ~$62,000/year), your costs will be lower — but you need to model this explicitly. Add this to your expense calculation before anything else.</p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: "#C4622D" }}>My Take</h2>
         <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: "#FAF4EC", border: "2px solid #C4622D" }}>

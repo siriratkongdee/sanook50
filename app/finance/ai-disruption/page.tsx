@@ -74,7 +74,10 @@ export default function AiDisruptionPage() {
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: "#D4A853" }}>
           <h3 className="text-xl font-bold mb-3" style={{ color: "#3B2A1A" }}>One Thing to Do This Week</h3>
-          <p className="opacity-90" style={{ color: "#3B2A1A" }}>Run the 12-month scenario: if you lost your job today, how long could you sustain your current lifestyle? That number tells you everything about what to prioritize.</p>
+          <p className="opacity-90 mb-4" style={{ color: "#3B2A1A" }}>Run the 12-month scenario: if you lost your job today, how long could you sustain your current lifestyle? Monthly expenses × 12 = your minimum runway target. If you are under 6 months, that is the only number that matters right now.</p>
+          <a href="/career/ai-crosshairs">
+            <button className="px-8 py-3 rounded-full font-bold hover:opacity-90" style={{ backgroundColor: "#3B2A1A", color: "#D4A853" }}>Read: How to Get Out of the Crosshairs →</button>
+          </a>
         </div>
 
         <div className="mt-12 pt-8 border-t" style={{ borderColor: "#e8ddd0" }}>
