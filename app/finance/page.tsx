@@ -11,6 +11,9 @@ export default function Finance() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF4EC" }}>
+      <div className="max-w-3xl mx-auto px-4 pt-8">
+        <a href="/" className="inline-flex items-center gap-2 text-sm font-medium hover:opacity-70" style={{ color: "#7D9B76" }}>← Back to Home</a>
+      </div>
       <div className="py-16" style={{ backgroundColor: "#FAF4EC", borderBottom: "4px solid #D4A853" }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">✨</div>

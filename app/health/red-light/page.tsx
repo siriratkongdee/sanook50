@@ -17,21 +17,21 @@ export default function RedLightPost() {
   const diverges = [
     'Brain and cognitive benefits: mechanistically plausible but limited in robust human RCTs; most studies are small or in clinical populations',
     'At-home device power vs. clinical: consumer panels vary wildly in irradiance — many underdeliver compared to research devices',
-    'Eye health: Dr. Jeffrey\'s retinal work is gaining traction, but mainstream ophthalmology remains skeptical and does not yet endorse it',
+    "Eye health: Dr. Jeffrey's retinal work is gaining traction, but mainstream ophthalmology remains skeptical and does not yet endorse it",
     'Biphasic dose response: too much light can be inhibitory rather than stimulatory — the optimal dose window is debated',
   ];
 
   const cautious = [
     { name: 'Dr. Lisa Ostrin — University of Houston (2024)', text: 'Ostrin raised concerns about consumer red light devices marketed for myopia control in children, citing insufficient evidence and potential for overuse. Important context: her warnings address close-held devices aimed at the eye, not whole-body panels used at a distance. Panel-based red light at 30cm+ is a different exposure category, but her caution is a useful reminder that self-experimentation with eyes warrants care.' },
     { name: 'Stanford Dermatology', text: 'Stanford dermatologists acknowledge that photobiomodulation has legitimate clinical applications but caution that at-home devices are inconsistently regulated, rarely independently tested, and marketed with overclaiming. Their main concern is that consumers substitute unproven devices for evidence-based dermatology treatments — not that the mechanism itself is flawed.' },
-    { name: 'General Ophthalmology Community', text: 'Mainstream ophthalmology has not endorsed red light therapy for vision improvement or myopia. The community notes that peer-reviewed evidence from Dr. Jeffrey\'s group is intriguing but preliminary — a single study is not clinical consensus. Until larger trials replicate the results, most eye doctors will not recommend it.' },
+    { name: 'General Ophthalmology Community', text: "Mainstream ophthalmology has not endorsed red light therapy for vision improvement or myopia. The community notes that peer-reviewed evidence from Dr. Jeffrey's group is intriguing but preliminary — a single study is not clinical consensus. Until larger trials replicate the results, most eye doctors will not recommend it." },
   ];
 
   const protocol = [
     { phase: 'Phase 1: Face & Skin', time: '8-10 min', distance: '15-30cm', wave: '660nm', emoji: '🌸', warning: 'If you have melasma: cover those areas. Red wavelengths (660nm especially) can temporarily activate melanocytes and darken existing pigmentation. I learned this the hard way — I now cover above my lip with my hand or a small cloth during face sessions.', benefit: 'Stimulates collagen and elastin remodeling. Apply hyaluronic acid serum immediately after while skin is warm — absorption improves with increased blood flow.' },
     { phase: 'Phase 2: Scalp & Hair', time: '5-10 min', distance: '2-5cm (as close as possible)', wave: '630-660nm', emoji: '💆', warning: null, benefit: 'Stimulates hair follicles and increases scalp microcirculation. Tip your head toward the panel. Realistic timeline is 8-12 weeks of consistency before visible changes — do not evaluate early.' },
     { phase: 'Phase 3: Brain, Mood & Eyes', time: '10 min', distance: 'As close as comfortable to forehead', wave: '810nm (NIR)', emoji: '🧠', warning: '⚠️ SAFETY: Do NOT stare directly into the panel — ever. I close my eyes or use protective goggles. I am personally tracking my vision over 90 days after reading the Jeffrey 2021 study. I do very brief (under 1 min), low-intensity exposure to the 670nm range only — eyes looking away, never directly at the panel. This is experimental self-tracking, not a recommendation.', benefit: '810nm near-infrared penetrates the skull most effectively. Research suggests improved cerebral blood flow and reduced neuroinflammation. Morning sessions also help set circadian rhythm — similar to morning light exposure.' },
-    { phase: 'Phase 4: Back Pain', time: '10-15 min (as needed)', distance: '15-30cm', wave: '850nm + 940nm', emoji: '🔙', warning: null, benefit: 'Deep NIR wavelengths penetrate muscle, fascia, and spinal tissue. Reduces inflammatory cytokines, relaxes chronic muscle tension, and improves tissue oxygenation. My morning stiffness is measurably better at week three.' },
+    { phase: 'Phase 4: Back Pain', time: '10-15 min (as needed)', distance: '15-30cm', wave: '850nm + 940nm', emoji: '🔙', warning: null, benefit: 'Deep NIR wavelengths penetrate muscle, fascia, and spinal tissue. Reduces inflammatory cytokines, relaxes chronic muscle tension, and improves tissue oxygenation. Deep NIR wavelengths penetrate muscle, fascia, and spinal tissue. Reduces inflammatory cytokines and improves tissue oxygenation.' },
   ];
 
   const results = [
@@ -53,20 +53,20 @@ export default function RedLightPost() {
       <div className="py-16" style={{ backgroundColor: '#FAF4EC', borderBottom: '4px solid #C4622D' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <span className="text-xs font-semibold px-3 py-1 rounded-full inline-block mb-6" style={{ backgroundColor: '#FAF4EC', color: '#C4622D', border: '1px solid #C4622D' }}>Wellness</span>
-          <h1 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#3B2A1A' }}>Red Light Therapy at 50: What the Science Actually Says and My BQ90 Pro Protocol</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6" style={{ color: '#3B2A1A' }}>Red Light Therapy at 50: What the Experts Say and Whether I Think It Is Worth It</h1>
           <p className="text-lg" style={{ color: '#3B2A1A', opacity: 0.7 }}>By Siri · March 2026 · 10 min read</p>
         </div>
       </div>
 
       <div className="max-w-3xl mx-auto px-4 py-16">
 
-        <p className="text-xl mb-8 font-medium" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>I have a Bestqool BQ90 Pro panel in my living room. Three weeks of daily morning sessions. I went deep on the research before I started — here is the honest breakdown of who believes in this, what they agree on, where they fight, and what I have noticed so far.</p>
+        <p className="text-xl mb-8 font-medium" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>I went deep on the research before buying a red light panel — podcasts, peer-reviewed papers, expert interviews. Here is the honest breakdown of who believes in this, what the science actually supports, where experts fight, and what I think.</p>
 
         <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>The Mechanism: Why This Is Not Pseudoscience</h2>
         <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>Red light therapy — formally photobiomodulation (PBM) — works by delivering specific wavelengths of light (typically 630-850nm) that are absorbed by cytochrome c oxidase, an enzyme in your mitochondria. This activates the electron transport chain, increasing ATP production, reducing oxidative stress, and triggering downstream repair and anti-inflammatory responses.</p>
-        <p className="mb-8" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>This is not homeopathy. The mechanism is documented. The debate is about which applications have robust human trial evidence — and which are extrapolated too aggressively from cell and animal studies.</p>
+        <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>This is not homeopathy. The mechanism is documented. The debate is about which applications have robust human trial evidence — and which are extrapolated too aggressively from cell and animal studies.</p>
 
-        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Device: Bestqool BQ90 Pro — 6 Wavelengths</h2>
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>The 6 Wavelengths: What Each One Does</h2>
         <div className="rounded-xl p-6 mb-8" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -124,7 +124,7 @@ export default function RedLightPost() {
           <p className="text-sm" style={{ color: '#3B2A1A', lineHeight: '1.7' }}>I am logging my vision informally over 90 days. I do brief low-intensity exposure in the 670nm range — eyes looking away, never directly at the panel. This is personal self-tracking. It is not a recommendation. <strong>Do NOT stare directly into any panel.</strong></p>
         </div>
 
-        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: '#C4622D' }}>Who Should Be Cautious</h2>
+        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: '#C4622D' }}>The Other Side: Who Should Be Cautious</h2>
         <p className="mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>Balance matters. Not every expert endorses red light therapy, and specific populations warrant real caution.</p>
         {cautious.map((e, i) => (
           <div key={i} className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
@@ -133,7 +133,22 @@ export default function RedLightPost() {
           </div>
         ))}
 
-        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: '#C4622D' }}>My Complete Morning Protocol (~25-30 min)</h2>
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Take</h2>
+        <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
+          <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>I was skeptical going in. I am a cautious convert — with the emphasis on cautious. Here is what I have noticed so far:</p>
+          <div className="space-y-3 mb-6">
+            {results.map((item, i) => (
+              <div key={i} className="flex gap-3">
+                <span className="font-semibold shrink-0" style={{ color: '#C4622D', minWidth: '160px' }}>{item.metric}:</span>
+                <span style={{ color: '#3B2A1A' }}>{item.result}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mb-4 font-semibold" style={{ color: '#C4622D' }}>Red light therapy is not magic. But the mechanism is real, the skin evidence is solid, and the circadian benefits make intuitive sense.</p>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.8' }}>The key is consistency and realistic expectations. Do not buy a panel expecting transformation in a week. Buy one if you are willing to commit to daily morning sessions for at least 30-90 days and track your own results honestly.</p>
+        </div>
+
+        <h2 className="text-2xl font-bold mt-10 mb-6" style={{ color: '#C4622D' }}>My Protocol (~25-30 min)</h2>
         {protocol.map((p, i) => (
           <div key={i} className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#C4622D' }}>
             <div className="font-bold text-lg mb-1" style={{ color: '#C4622D' }}>{p.emoji} {p.phase}</div>
@@ -161,19 +176,6 @@ export default function RedLightPost() {
               <p style={{ color: '#3B2A1A' }}>{r}</p>
             </div>
           ))}
-        </div>
-
-        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>What I Have Noticed So Far (Week 3)</h2>
-        <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
-          <p className="mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>I was skeptical going in. Three weeks later, I am a cautious convert — with the emphasis on cautious. Here is the honest log:</p>
-          <div className="space-y-3">
-            {results.map((item, i) => (
-              <div key={i} className="flex gap-3">
-                <span className="font-semibold shrink-0" style={{ color: '#C4622D', minWidth: '160px' }}>{item.metric}:</span>
-                <span style={{ color: '#3B2A1A' }}>{item.result}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="rounded-xl p-8 text-center" style={{ backgroundColor: '#7D9B76' }}>
