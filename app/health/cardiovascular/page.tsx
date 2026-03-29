@@ -187,11 +187,13 @@ export default function CardiovascularPost() {
         <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Take — And My Actual Numbers</h2>
         <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I got curious about my own heart health last year and pushed for a full cardiovascular panel — not just the standard cholesterol numbers. Here is what came back.
+            I got curious about my own heart health last year and pushed for a comprehensive panel — not just the standard cholesterol numbers. Four panels. Dozens of markers. Here is what came back, and what it actually means.
           </p>
-          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
-            <p className="font-semibold mb-3" style={{ color: '#3B2A1A' }}>Standard panel — looked completely fine:</p>
-            <div className="grid grid-cols-2 gap-2 text-sm" style={{ color: '#3B2A1A' }}>
+
+          <div className="rounded-lg p-5 mb-4" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#7D9B76' }}>✅ Standard Cholesterol — Looked Perfect</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>A doctor glancing at this would say: you are doing great.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
               <span>Total Cholesterol</span><span className="font-medium" style={{ color: '#7D9B76' }}>165 mg/dL ✓</span>
               <span>LDL-C</span><span className="font-medium" style={{ color: '#7D9B76' }}>71 mg/dL ✓</span>
               <span>Triglycerides</span><span className="font-medium" style={{ color: '#7D9B76' }}>72 mg/dL ✓</span>
@@ -200,22 +202,47 @@ export default function CardiovascularPost() {
               <span>Lp(a)</span><span className="font-medium" style={{ color: '#7D9B76' }}>20 nmol/L ✓</span>
             </div>
           </div>
-          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
-            <p className="font-semibold mb-3" style={{ color: '#3B2A1A' }}>Particle breakdown — where it got interesting:</p>
-            <div className="grid grid-cols-2 gap-2 text-sm" style={{ color: '#3B2A1A' }}>
-              <span>LDL Small (dense particles)</span><span className="font-medium" style={{ color: '#C4622D' }}>162 nmol/L — above range ↑</span>
-              <span>HDL Large (protective particles)</span><span className="font-medium" style={{ color: '#C4622D' }}>5858 nmol/L — below range ↓</span>
+
+          <div className="rounded-lg p-5 mb-4" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#C4622D' }}>⚠️ Particle Breakdown — Where It Got Interesting</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>Same blood draw. Very different story.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>LDL Small (dense particles)</span><span className="font-medium" style={{ color: '#C4622D' }}>162 nmol/L ↑ above range</span>
+              <span>HDL Large (protective)</span><span className="font-medium" style={{ color: '#C4622D' }}>5858 nmol/L ↓ below range</span>
               <span>hs-CRP (inflammation)</span><span className="font-medium" style={{ color: '#D4A853' }}>1.2 mg/L — mildly elevated</span>
             </div>
           </div>
+
+          <div className="rounded-lg p-5 mb-4" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#D4A853' }}>🔬 Metabolic Panel — One Flag</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>Glucose and insulin were fine. One marker caught my attention.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>Fasting Glucose</span><span className="font-medium" style={{ color: '#7D9B76' }}>93 mg/dL ✓</span>
+              <span>Fasting Insulin</span><span className="font-medium" style={{ color: '#7D9B76' }}>8.9 µIU/mL ✓</span>
+              <span>HbA1c</span><span className="font-medium" style={{ color: '#D4A853' }}>5.7% — borderline (ADA prediabetes threshold)</span>
+            </div>
+          </div>
+
+          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#7D9B76' }}>✅ Nutrients — Mostly Good, Room to Optimize</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>All in range technically — but &apos;in range&apos; and &apos;optimal&apos; are not the same thing.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>Vitamin D</span><span className="font-medium" style={{ color: '#D4A853' }}>31 ng/mL (optimal is 40–60)</span>
+              <span>Omega 6/3 Ratio</span><span className="font-medium" style={{ color: '#D4A853' }}>6.7 (optimal is under 4)</span>
+              <span>Omega-3 Total</span><span className="font-medium" style={{ color: '#7D9B76' }}>6.6% ✓</span>
+              <span>Magnesium</span><span className="font-medium" style={{ color: '#7D9B76' }}>5.4 mg/dL ✓</span>
+              <span>Zinc</span><span className="font-medium" style={{ color: '#7D9B76' }}>77 mcg/dL ✓</span>
+            </div>
+          </div>
+
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            A doctor looking at my standard numbers would say: <em>you are doing great.</em> And in a lot of ways, I am. But the particle panel tells the nuanced story — the small dense LDL creeping up, the large protective HDL dipping, a whisper of inflammation. Exactly what research shows happens during the menopausal transition, quietly, before anything shows up on a routine lab.
+            Here is what strikes me looking at all four panels together: every single system is telling the same quiet story. The lipids shifted. The insulin sensitivity is at the edge. Inflammation is ticking. Vitamin D and omega ratios could be better. None of it is a crisis. All of it is consistent with what the research says happens during the menopausal transition — often before you feel a thing.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I am not panicking. I am paying attention. There is a big difference. These numbers are not a crisis — they are a signal that the transition is real and that the right time to understand your baseline is <em>now</em>, not after something goes wrong.
+            A standard panel would have sent me home with a clean bill of health. And I would have had no idea any of this was happening.
           </p>
           <p className="font-semibold" style={{ color: '#C4622D' }}>
-            If I had only run the standard panel, I would have left thinking everything was fine. Getting the full picture is what gave me something to actually work with.
+            I am not panicking. I am paying attention. There is a big difference — and this is exactly what informed prevention looks like.
           </p>
         </div>
 
