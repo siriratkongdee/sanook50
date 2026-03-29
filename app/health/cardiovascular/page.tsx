@@ -184,19 +184,38 @@ export default function CardiovascularPost() {
         </p>
 
         {/* My Take */}
-        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Take</h2>
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>My Take — And My Actual Numbers</h2>
         <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I am 50. I am in the middle of this transition. And when I learned that the majority of my cardiovascular risk trajectory was being set during this specific decade — and that most women are not screened correctly during it — I felt something between grief and fury.
+            I got curious about my own heart health last year and pushed for a full cardiovascular panel — not just the standard cholesterol numbers. Here is what came back.
+          </p>
+          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-3" style={{ color: '#3B2A1A' }}>Standard panel — looked completely fine:</p>
+            <div className="grid grid-cols-2 gap-2 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>Total Cholesterol</span><span className="font-medium" style={{ color: '#7D9B76' }}>165 mg/dL ✓</span>
+              <span>LDL-C</span><span className="font-medium" style={{ color: '#7D9B76' }}>71 mg/dL ✓</span>
+              <span>Triglycerides</span><span className="font-medium" style={{ color: '#7D9B76' }}>72 mg/dL ✓</span>
+              <span>TC/HDL Ratio</span><span className="font-medium" style={{ color: '#7D9B76' }}>2.1 ✓</span>
+              <span>ApoB</span><span className="font-medium" style={{ color: '#7D9B76' }}>65 mg/dL ✓</span>
+              <span>Lp(a)</span><span className="font-medium" style={{ color: '#7D9B76' }}>20 nmol/L ✓</span>
+            </div>
+          </div>
+          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-3" style={{ color: '#3B2A1A' }}>Particle breakdown — where it got interesting:</p>
+            <div className="grid grid-cols-2 gap-2 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>LDL Small (dense particles)</span><span className="font-medium" style={{ color: '#C4622D' }}>162 nmol/L — above range ↑</span>
+              <span>HDL Large (protective particles)</span><span className="font-medium" style={{ color: '#C4622D' }}>5858 nmol/L — below range ↓</span>
+              <span>hs-CRP (inflammation)</span><span className="font-medium" style={{ color: '#D4A853' }}>1.2 mg/L — mildly elevated</span>
+            </div>
+          </div>
+          <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
+            A doctor looking at my standard numbers would say: <em>you are doing great.</em> And in a lot of ways, I am. But the particle panel tells the nuanced story — the small dense LDL creeping up, the large protective HDL dipping, a whisper of inflammation. Exactly what research shows happens during the menopausal transition, quietly, before anything shows up on a routine lab.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            Not at any one doctor. At the system that decided women&apos;s heart health could wait until something bad happened. At the decades of research focused on male cardiac patients. At how normalized it became to say "your labs look fine" when no one ordered LDL-P or ApoB or hsCRP.
+            I am not panicking. I am paying attention. There is a big difference. These numbers are not a crisis — they are a signal that the transition is real and that the right time to understand your baseline is <em>now</em>, not after something goes wrong.
           </p>
-          <p className="mb-4 font-semibold" style={{ color: '#C4622D' }}>
-            Get your baseline panel in perimenopause. Not after a cardiac event. Not at 65. Now.
-          </p>
-          <p style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            This is not catastrophizing. This is informed prevention. The research is clear: the menopausal transition is a cardiovascular inflection point. You do not get the 10-year window back. Use it.
+          <p className="font-semibold" style={{ color: '#C4622D' }}>
+            If I had only run the standard panel, I would have left thinking everything was fine. Getting the full picture is what gave me something to actually work with.
           </p>
         </div>
 
