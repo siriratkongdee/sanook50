@@ -223,7 +223,7 @@ export default function CardiovascularPost() {
             </div>
           </div>
 
-          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+          <div className="rounded-lg p-5 mb-4" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
             <p className="font-semibold mb-1" style={{ color: '#7D9B76' }}>✅ Nutrients — Mostly Good, Room to Optimize</p>
             <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>All in range technically — but &apos;in range&apos; and &apos;optimal&apos; are not the same thing.</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
@@ -235,14 +235,43 @@ export default function CardiovascularPost() {
             </div>
           </div>
 
+          <div className="rounded-lg p-5 mb-4" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#C4622D' }}>🔑 Hormones — The Root Cause</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>This is the panel that explains why everything else is shifting.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>AMH (ovarian reserve)</span><span className="font-medium" style={{ color: '#C4622D' }}>0.04 ng/mL — essentially depleted</span>
+              <span>FSH</span><span className="font-medium" style={{ color: '#D4A853' }}>21.1 mIU/mL — elevated (perimenopause)</span>
+              <span>LH</span><span className="font-medium" style={{ color: '#D4A853' }}>21.2 mIU/mL — elevated</span>
+              <span>Estradiol (E2)</span><span className="font-medium" style={{ color: '#D4A853' }}>167 pg/mL — fluctuating, not stable</span>
+              <span>Testosterone, Total</span><span className="font-medium" style={{ color: '#7D9B76' }}>32 ng/dL ✓</span>
+              <span>SHBG</span><span className="font-medium" style={{ color: '#D4A853' }}>83 nmol/L — high (binds free hormones)</span>
+              <span>DHEA Sulfate</span><span className="font-medium" style={{ color: '#7D9B76' }}>176 mcg/dL ✓</span>
+            </div>
+          </div>
+
+          <div className="rounded-lg p-5 mb-5" style={{ backgroundColor: 'white', border: '1px solid #e8ddd0' }}>
+            <p className="font-semibold mb-1" style={{ color: '#7D9B76' }}>✅ Thyroid — Completely Clean</p>
+            <p className="text-sm mb-3" style={{ color: '#3B2A1A', opacity: 0.7 }}>No autoimmune markers. No dysfunction. The thyroid is not why I am tired.</p>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-sm" style={{ color: '#3B2A1A' }}>
+              <span>TSH</span><span className="font-medium" style={{ color: '#7D9B76' }}>1.31 mIU/L ✓ (optimal 1–2)</span>
+              <span>Free T4</span><span className="font-medium" style={{ color: '#7D9B76' }}>1.1 ng/dL ✓</span>
+              <span>Free T3</span><span className="font-medium" style={{ color: '#7D9B76' }}>3.0 pg/mL ✓</span>
+              <span>TPO Antibodies</span><span className="font-medium" style={{ color: '#7D9B76' }}>1 IU/mL ✓ (no Hashimoto&apos;s)</span>
+              <span>TgAb Antibodies</span><span className="font-medium" style={{ color: '#7D9B76' }}>&lt;1 IU/mL ✓</span>
+            </div>
+          </div>
+
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            Here is what strikes me looking at all four panels together: every single system is telling the same quiet story. The lipids shifted. The insulin sensitivity is at the edge. Inflammation is ticking. Vitamin D and omega ratios could be better. None of it is a crisis. All of it is consistent with what the research says happens during the menopausal transition — often before you feel a thing.
+            Looking at all six panels together, everything connects. My AMH is nearly zero. My FSH and LH are elevated — my brain is working overtime trying to stimulate ovaries that are winding down. My estradiol is still present but fluctuating wildly, not stable. That hormonal volatility is the root cause behind every other signal: the particle shifts in my lipids, the HbA1c creeping to the borderline, the mild inflammation, the Vitamin D and omega ratios that could be better.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            A standard panel would have sent me home with a clean bill of health. And I would have had no idea any of this was happening.
+            None of this is a crisis. It is a map. And the thyroid being completely clean is actually useful information — it rules out one common cause of fatigue and points more clearly at the hormonal transition as the driver.
+          </p>
+          <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
+            A standard panel would have sent me home with a clean bill of health. And I would have had no idea any of this was quietly shifting.
           </p>
           <p className="font-semibold" style={{ color: '#C4622D' }}>
-            I am not panicking. I am paying attention. There is a big difference — and this is exactly what informed prevention looks like.
+            I am not panicking. I am paying attention. There is a big difference — and this is exactly what informed prevention looks like at 50.
           </p>
         </div>
 
