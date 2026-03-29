@@ -3,6 +3,7 @@ export default function Health() {
     { title: "Should I Try HRT? What the Experts Actually Say", excerpt: "I watched 8 hours of podcasts from Peter Attia, Mary Claire Haver & Rhonda Patrick so you don't have to. Here's the honest breakdown.", emoji: "🌿", tag: "Hormones", href: "/health/hrt" },
     { title: "Why Your Body Feels Different at 50: The Syndrome Nobody Told You About", excerpt: "Over 70% of midlife women experience joint pain, muscle loss and bone changes during menopause. It has a name — and knowing that changes everything.", emoji: "💪", tag: "Body", href: "/health/msm" },
     { title: "Red Light Therapy at 50: What the Experts Say and Whether I Think It Is Worth It", excerpt: "I went deep on the research before buying a red light panel. Here is the honest breakdown — expert voices, what the science supports, where they fight, and what I noticed in the first 2 weeks.", emoji: "🔴", tag: "Wellness", href: "/health/red-light" },
+    { title: "Your Heart Is Changing at 50. Here's What Nobody Told You.", excerpt: "Heart disease kills more women than all cancers combined — and the risk starts in perimenopause, not after. The tests most doctors don't order, the symptoms they miss, and what actually helps.", emoji: "❤️", tag: "Heart Health", href: "/health/cardiovascular" },
   ];
 
   return (
