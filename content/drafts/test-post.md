@@ -2,6 +2,8 @@
 title: "Welcome to Sanook50"
 date: "2026-04-19"
 excerpt: "Your guide to health, longevity, and thriving in your 50s and beyond."
+category: "health"
+tags: ["menopause", "longevity", "HRT"]
 ---
 
 # Welcome to Sanook50

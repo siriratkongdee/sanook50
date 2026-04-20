@@ -11,9 +11,11 @@ export interface Post {
   excerpt: string
   content: string
   draft: boolean
+  category?: string
+  tags?: string[]
 }
 
-export function getAllPosts(): Post[] {
+export function getAllPosts(category?: string): Post[] {
   const showDrafts = process.env.SHOW_DRAFTS === 'true'
   
   const folders = ['published']
@@ -36,14 +38,21 @@ export function getAllPosts(): Post[] {
       const fileContent = fs.readFileSync(filePath, 'utf8')
       const { data, content } = matter(fileContent)
       
-      posts.push({
+      const post: Post = {
         slug: filename.replace('.md', ''),
         title: data.title || 'Untitled',
         date: data.date || new Date().toISOString(),
         excerpt: data.excerpt || content.slice(0, 150) + '...',
         content,
-        draft: folder === 'drafts'
-      })
+        draft: folder === 'drafts',
+        category: data.category,
+        tags: data.tags || []
+      }
+
+      // Filter by category if specified
+      if (category && post.category !== category) return
+
+      posts.push(post)
     })
   })
 
@@ -66,10 +75,36 @@ export function getPostBySlug(slug: string): Post | null {
         date: data.date || new Date().toISOString(),
         excerpt: data.excerpt || '',
         content,
-        draft: folder === 'drafts'
+        draft: folder === 'drafts',
+        category: data.category,
+        tags: data.tags || []
       }
     }
   }
 
   return null
+}
+
+export function searchPosts(query: string): Post[] {
+  const posts = getAllPosts()
+  const lowerQuery = query.toLowerCase()
+
+  return posts.filter(post => 
+    post.title.toLowerCase().includes(lowerQuery) ||
+    post.excerpt.toLowerCase().includes(lowerQuery) ||
+    post.tags?.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
+    post.content.toLowerCase().includes(lowerQuery)
+  )
+}
+
+export function getAllCategories(): string[] {
+  const posts = getAllPosts()
+  const categories = new Set(posts.map(p => p.category).filter(Boolean))
+  return Array.from(categories) as string[]
+}
+
+export function getAllTags(): string[] {
+  const posts = getAllPosts()
+  const tags = new Set(posts.flatMap(p => p.tags || []))
+  return Array.from(tags)
 }

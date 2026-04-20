@@ -2,6 +2,8 @@
 title: "[TITLE]"
 date: "[YYYY-MM-DD]"
 excerpt: "[One sentence hook — what problem does this solve?]"
+category: "health"  # health | finance | career | longevity
+tags: ["menopause", "HRT", "hormones"]  # specific topics for search
 ---
 
 # [Title — Make it Clear & Specific]
@@ -29,22 +31,22 @@ excerpt: "[One sentence hook — what problem does this solve?]"
 
 ## Siri's Take
 
-[This is where YOUR voice comes in. Be direct, practical, data-driven. Share your perspective — not just "experts say X," but "here's what this means for you."]
+[YOUR voice. Be direct, practical, data-driven. Share your perspective.]
 
 **Why this matters:**
 [Connect to reader's life. Be specific about implications.]
 
 **The nuance they're missing:**
-[If experts disagree or oversimplify, explain it. Your AWS/data brain is valuable here.]
+[If experts disagree or oversimplify, explain it.]
 
 **What I'm doing:**
-[Optional: Share your own experience if relevant. Makes it real.]
+[Optional: Share your own experience if relevant.]
 
 ---
 
 ## One Action You Can Take
 
-[ONE specific, doable thing. Not "talk to your doctor" — that's too vague. Give them something concrete.]
+[ONE specific, doable thing. Not "talk to your doctor" — give them something concrete.]
 
 **Do this:**
 [Clear instruction]
