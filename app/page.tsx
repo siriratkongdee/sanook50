@@ -1,18 +1,10 @@
-'use client';
+import { getAllPosts } from '@/lib/content'
+import Image from 'next/image'
+import Link from 'next/link'
+import EmailSignup from './EmailSignup'
 
-import { useState } from 'react';
-import Image from 'next/image';
-
-export default function Home() {
-  const [email, setEmail] = useState('');
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Email submitted:', email);
-    setSubmitted(true);
-    setEmail('');
-  };
+export default async function Home() {
+  const latestPosts = getAllPosts().slice(0, 3)
 
   const contentPillars = [
     {
@@ -33,7 +25,7 @@ export default function Home() {
       icon: "🌸",
       href: "/career"
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF4EC', color: '#3B2A1A' }}>
@@ -48,12 +40,67 @@ export default function Home() {
             <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto" style={{ color: '#3B2A1A', opacity: 0.8 }}>
               Empowering women to thrive, explore, and embrace the next chapter of their lives
             </p>
-            <a href="/health">
+            <a href="/articles">
               <button
                 className="font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 text-white shadow-lg"
                 style={{ backgroundColor: '#C4622D' }}
               >
-                Explore Content
+                Explore Articles
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Articles */}
+      <section className="py-16" style={{ backgroundColor: '#fff8f2' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#3B2A1A' }}>
+              Latest from the Experts
+            </h2>
+            <p style={{ color: '#3B2A1A', opacity: 0.7 }} className="text-lg">
+              We watch the experts so you don't have to
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            {latestPosts.map((post) => (
+              <Link key={post.slug} href={`/articles/${post.slug}`}>
+                <article
+                  className="rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border cursor-pointer h-full flex flex-col"
+                  style={{ backgroundColor: '#FAF4EC', borderColor: '#e8ddd0' }}
+                >
+                  {post.category && (
+                    <span className="inline-block text-xs font-medium text-white px-3 py-1 rounded-full mb-3 capitalize w-fit" style={{ backgroundColor: '#7D9B76' }}>
+                      {post.category}
+                    </span>
+                  )}
+                  <h3 className="text-xl font-bold mb-3" style={{ color: '#C4622D' }}>
+                    {post.title}
+                  </h3>
+                  <p className="text-base mb-4 flex-grow" style={{ color: '#3B2A1A', opacity: 0.8 }}>
+                    {post.excerpt}
+                  </p>
+                  <time className="text-sm" style={{ color: '#3B2A1A', opacity: 0.6 }}>
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      month: 'long',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </time>
+                </article>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href="/articles">
+              <button
+                className="font-bold py-3 px-8 rounded-full text-lg transition duration-300 hover:opacity-90 text-white"
+                style={{ backgroundColor: '#C4622D' }}
+              >
+                View All Articles →
               </button>
             </a>
           </div>
@@ -61,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Content Pillars */}
-      <section className="py-16" style={{ backgroundColor: '#fff8f2' }}>
+      <section className="py-16" style={{ backgroundColor: '#FAF4EC' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#3B2A1A' }}>
@@ -74,7 +121,7 @@ export default function Home() {
               <a key={index} href={pillar.href}>
                 <div
                   className="rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border cursor-pointer h-full"
-                  style={{ backgroundColor: '#FAF4EC', borderColor: '#e8ddd0' }}
+                  style={{ backgroundColor: '#fff8f2', borderColor: '#e8ddd0' }}
                 >
                   <div className="text-5xl mb-6">{pillar.icon}</div>
                   <h3 className="text-2xl font-bold mb-4" style={{ color: '#C4622D' }}>{pillar.title}</h3>
@@ -105,37 +152,7 @@ export default function Home() {
       </section>
 
       {/* Email signup */}
-      <section className="py-16" style={{ backgroundColor: '#FAF4EC' }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4" style={{ color: '#C4622D' }}>Stay Updated</h2>
-          <p className="text-xl mb-8" style={{ color: '#3B2A1A', opacity: 0.8 }}>
-            Join our community of women thriving at 50+
-          </p>
-          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                className="flex-grow px-6 py-3 rounded-full focus:outline-none focus:ring-2 text-base"
-                style={{ border: '1px solid #C4622D', color: '#3B2A1A', backgroundColor: 'white' }}
-                required
-              />
-              <button
-                type="submit"
-                className="text-white font-bold py-3 px-8 rounded-full transition duration-300 hover:opacity-90"
-                style={{ backgroundColor: '#C4622D' }}
-              >
-                Subscribe
-              </button>
-            </div>
-            {submitted && (
-              <p className="mt-4 font-medium" style={{ color: '#7D9B76' }}>Thank you! Welcome to Sanook50! 🌸</p>
-            )}
-          </form>
-        </div>
-      </section>
+      <EmailSignup />
 
       {/* Footer */}
       <footer className="py-12 text-white" style={{ backgroundColor: '#3B2A1A' }}>
@@ -152,5 +169,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
