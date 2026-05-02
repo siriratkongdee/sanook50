@@ -2,9 +2,10 @@ import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts } from '@/lib/content'
 import ReactMarkdown from 'react-markdown'
 
+// Force dynamic rendering when SHOW_DRAFTS is enabled
+export const dynamic = process.env.SHOW_DRAFTS === 'true' ? 'force-dynamic' : 'auto'
+
 export async function generateStaticParams() {
-  // Ensure getAllPosts also uses the SHOW_DRAFTS env var during build
-  // process.env.SHOW_DRAFTS is available here during the build step
   const posts = getAllPosts()
   return posts.map((post) => ({
     slug: post.slug,
@@ -12,7 +13,6 @@ export async function generateStaticParams() {
 }
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
-  // getPostBySlug also uses process.env.SHOW_DRAFTS
   const post = getPostBySlug(params.slug)
 
   if (!post) {
