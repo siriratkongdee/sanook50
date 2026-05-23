@@ -1,27 +1,10 @@
 import { notFound } from 'next/navigation'
-import { getPostBySlug, getAllPosts } from '@/lib/content'
+import { getPostBySlug } from '@/lib/content'
 import ReactMarkdown from 'react-markdown'
 
-// Always use dynamic rendering if SHOW_DRAFTS is set
-// This ensures draft articles are available immediately
+// Force dynamic rendering - no static generation
 export const dynamic = 'force-dynamic'
 export const dynamicParams = true
-
-export async function generateStaticParams() {
-  // Only generate static params for published posts
-  // Drafts will be handled dynamically
-  const showDrafts = process.env.SHOW_DRAFTS === 'true'
-  if (showDrafts) {
-    // In draft mode, don't pre-generate any pages
-    // Let them all be dynamic
-    return []
-  }
-  
-  const posts = getAllPosts()
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
-}
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
   const post = getPostBySlug(params.slug)
