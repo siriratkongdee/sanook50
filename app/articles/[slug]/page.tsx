@@ -2,11 +2,11 @@ import { notFound } from 'next/navigation'
 import { getPostBySlug } from '@/lib/content'
 import ReactMarkdown from 'react-markdown'
 
-// Force dynamic rendering - no static generation
+// Force dynamic rendering
 export const dynamic = 'force-dynamic'
-export const dynamicParams = true
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params
   const post = getPostBySlug(params.slug)
 
   if (!post) {
