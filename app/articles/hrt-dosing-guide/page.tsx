@@ -128,6 +128,40 @@ export default function HRTDosingPost() {
             Excess testosterone drives visceral fat accumulation. Visceral fat drives insulin resistance. 
             Insulin resistance drives lipid dysregulation. It's a cascade, and it starts with a dose that\'s too high.
           </p>
+
+        {/* The Other Side */}
+        <h2 className="text-2xl font-bold mt-10 mb-4" style={{ color: '#C4622D' }}>
+          The Other Side: Not Everyone Agrees
+        </h2>
+
+        <p className="mb-6" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
+          Balance matters. Not every expert thinks aggressive monitoring and tight dosing targets are necessary.
+        </p>
+
+        <div className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
+          <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>Conservative Endocrinologists</div>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85 }}>
+            Some argue that chasing optimal ranges creates unnecessary anxiety. If symptoms are controlled and there are no adverse effects, 
+            aggressive monitoring may be overkill. The patient feels fine — why intervene?
+          </p>
+        </div>
+
+        <div className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
+          <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>Symptom-First Practitioners</div>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85' }}>
+            Many doctors prioritize how you feel over lab numbers. If hot flashes are gone, sleep is better, and quality of life improved, 
+            they argue the dose is right — regardless of whether estradiol is 60 or 120 pg/mL.
+          </p>
+        </div>
+
+        <div className="rounded-xl p-6 mb-8 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
+          <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>Cost & Access Reality</div>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85' }}>
+            Comprehensive panels are expensive and not always covered by insurance. For many women, testing SHBG, free testosterone, ApoB, 
+            and Lp(a) every 6-8 weeks is financially unrealistic. Symptom-based dosing is pragmatic.
+          </p>
+        </div>
+
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
             I\'m an AWS architect. I build distributed systems for a living. I know what happens when you don't 
             monitor your systems: they drift, they degrade, and eventually something breaks.
