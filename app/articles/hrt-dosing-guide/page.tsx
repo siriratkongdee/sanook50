@@ -146,12 +146,31 @@ export default function HRTDosingPost() {
             If you're on HRT (or considering it), this is the panel that actually tells you what's happening:
           </p>
           <div className="bg-white rounded-lg p-6 text-left">
-            {keyActions.map((action, i) => (
-              <div key={i} className="flex items-start gap-3 mb-3">
-                <span style={{ color: '#7D9B76' }}>✓</span>
-                <p style={{ color: '#3B2A1A', lineHeight: '1.7' }}>{action}</p>
-              </div>
-            ))}
+            <h4 className="font-bold mb-3" style={{ color: '#C4622D' }}>Hormone Panel:</h4>
+            <div className="space-y-2 mb-6">
+              {hormoneTests.map((test, i) => (
+                <div key={i} className="text-sm">
+                  <p className="font-semibold" style={{ color: '#3B2A1A' }}>{test.test}</p>
+                  <p style={{ color: '#7D9B76' }}>Target: {test.target}</p>
+                  <p className="text-xs opacity-70" style={{ color: '#3B2A1A' }}>{test.note}</p>
+                </div>
+              ))}
+            </div>
+            
+            <h4 className="font-bold mb-3 mt-6" style={{ color: '#C4622D' }}>Metabolic Markers:</h4>
+            <div className="space-y-2">
+              {metabolicTests.map((test, i) => (
+                <div key={i} className="text-sm">
+                  <p className="font-semibold" style={{ color: '#3B2A1A' }}>{test.test}</p>
+                  <p style={{ color: '#7D9B76' }}>Target: {test.target}</p>
+                  <p className="text-xs opacity-70" style={{ color: '#3B2A1A' }}>{test.note}</p>
+                </div>
+              ))}
+            </div>
+            
+            <p className="text-sm mt-6 font-semibold" style={{ color: '#C4622D' }}>
+              Retest 6–8 weeks after any dose change — don't wait six months.
+            </p>
           </div>
           <p className="text-white text-sm mt-6 opacity-75">
             You are not asking for permission. You are managing your own system.
