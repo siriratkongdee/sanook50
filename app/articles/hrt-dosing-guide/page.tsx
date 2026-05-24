@@ -10,7 +10,7 @@ export default function HRTDosingPost() {
       color: '#4a9eff', 
       name: 'Kresser Institute', 
       role: 'Functional Medicine',
-      text: 'Estradiol at 293 pg/mL looks normal on paper. But if your cycle runs 18–46 days, something is wrong. A single lab snapshot doesn\'t tell the whole story. Total testosterone can look "normal" while free testosterone is low if SHBG is above 100.'
+      text: 'Estradiol at 293 pg/mL looks normal on paper. But if your cycle runs 18–46 days, something is wrong. A single lab snapshot doesn't tell the whole story. Total testosterone can look "normal" while free testosterone is low if SHBG is above 100.'
     },
     { 
       color: '#C4622D', 
@@ -112,13 +112,13 @@ export default function HRTDosingPost() {
 
         <div className="rounded-xl p-8 mb-8" style={{ backgroundColor: '#FAF4EC', border: '2px solid #C4622D' }}>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I\'ve been on HRT for about a year. My symptoms improved. I felt better. I assumed that meant my doses were right.
+            I've been on HRT for about a year. My symptoms improved. I felt better. I assumed that meant my doses were right.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            They weren\'t.
+            They weren't.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            My April 2026 labs: testosterone at 112 ng/dL, reference range 2–45. That\'s a 2.5× overdose. 
+            My April 2026 labs: testosterone at 112 ng/dL, reference range 2–45. That's a 2.5× overdose. 
             At the same time, my LDL climbed 52% and my HDL dropped 18% compared to October 2024.
           </p>
           <p className="mb-4 font-semibold" style={{ color: '#C4622D' }}>
@@ -126,10 +126,10 @@ export default function HRTDosingPost() {
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
             Excess testosterone drives visceral fat accumulation. Visceral fat drives insulin resistance. 
-            Insulin resistance drives lipid dysregulation. It\'s a cascade, and it starts with a dose that\'s too high.
+            Insulin resistance drives lipid dysregulation. It's a cascade, and it starts with a dose that\'s too high.
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I\'m an AWS architect. I build distributed systems for a living. I know what happens when you don\'t 
+            I\'m an AWS architect. I build distributed systems for a living. I know what happens when you don't 
             monitor your systems: they drift, they degrade, and eventually something breaks.
           </p>
           <p className="font-semibold" style={{ color: '#C4622D' }}>
@@ -143,7 +143,7 @@ export default function HRTDosingPost() {
             One Action: Get the Right Tests
           </h3>
           <p className="text-white opacity-90 mb-6">
-            If you\'re on HRT (or considering it), this is the panel that actually tells you what\'s happening:
+            If you're on HRT (or considering it), this is the panel that actually tells you what's happening:
           </p>
           <div className="bg-white rounded-lg p-6 text-left">
             {keyActions.map((action, i) => (
