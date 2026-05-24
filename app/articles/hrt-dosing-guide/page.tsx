@@ -142,8 +142,12 @@ export default function HRTDosingPost() {
           <h3 className="text-xl font-bold text-white mb-3">
             One Action: Get the Right Tests
           </h3>
-          <p className="text-white opacity-90 mb-6">
-            If you're on HRT (or considering it), this is the panel that actually tells you what's happening:
+          <p className="text-white opacity-90 mb-4">
+            If you're on HRT (or considering it), this is what to test — and track over time:
+          </p>
+          <p className="text-white text-sm opacity-75 mb-6">
+            Note: Targets vary by expert and individual context. What matters most is YOUR trend — 
+            are things improving or worsening? Use these as discussion points with your provider.
           </p>
           <div className="bg-white rounded-lg p-6 text-left">
             <h4 className="font-bold mb-3" style={{ color: '#C4622D' }}>Hormone Panel:</h4>
@@ -169,7 +173,10 @@ export default function HRTDosingPost() {
             </div>
             
             <p className="text-sm mt-6 font-semibold" style={{ color: '#C4622D' }}>
-              Retest 6–8 weeks after any dose change — don't wait six months.
+              Most important: Test baseline, retest 6–8 weeks after changes, and track YOUR trends.
+            </p>
+            <p className="text-xs mt-2 opacity-70" style={{ color: '#3B2A1A' }}>
+              Single numbers don't tell the story — direction and rate of change do.
             </p>
           </div>
           <p className="text-white text-sm mt-6 opacity-75">
