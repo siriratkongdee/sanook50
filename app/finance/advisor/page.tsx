@@ -26,7 +26,14 @@ export default function AdvisorWaitlist() {
           <div className="text-5xl mb-6">🤖</div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Finally. A Financial Advisor Built for Women 50+</h1>
           <p className="text-xl text-white mb-4" style={{ opacity: 0.9 }}>Personalized retirement scenarios. Plain-English answers. No sales pitch. No one-size-fits-all nonsense.</p>
-          <p className="text-lg text-white" style={{ opacity: 0.8 }}>Your situation is specific. Your advisor should be too.</p>
+          <p className="text-lg text-white mb-8" style={{ opacity: 0.8 }}>Your situation is specific. Your advisor should be too.</p>
+          <a
+            href="/finance/roth-conversion"
+            className="inline-block px-6 py-3 rounded-xl font-bold hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "white", color: "#7D9B76" }}
+          >
+            Try the Roth Conversion &amp; RMD Planner →
+          </a>
         </div>
       </div>
 

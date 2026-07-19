@@ -10,7 +10,7 @@ export default function HRTDosingPost() {
       color: '#4a9eff', 
       name: 'Kresser Institute', 
       role: 'Functional Medicine',
-      text: 'Estradiol at 293 pg/mL looks normal on paper. But if your cycle runs 18–46 days, something is wrong. A single lab snapshot doesn't tell the whole story. Total testosterone can look "normal" while free testosterone is low if SHBG is above 100.'
+      text: 'Estradiol at 293 pg/mL looks normal on paper. But if your cycle runs 18–46 days, something is wrong. A single lab snapshot doesn\'t tell the whole story. Total testosterone can look "normal" while free testosterone is low if SHBG is above 100.'
     },
     { 
       color: '#C4622D', 
@@ -32,11 +32,22 @@ export default function HRTDosingPost() {
     },
   ];
 
-  const keyActions = [
-    'Get comprehensive hormones: estradiol, progesterone, total + free testosterone, SHBG, Free Androgen Index',
-    'Test metabolic markers: LDL, HDL, triglycerides, ApoB, Lp(a), hsCRP',
-    'Retest 6–8 weeks after any dose change',
-    'Don\'t wait six months to find out something drifted'
+  const hormoneTests = [
+    { test: 'Estradiol (E2)', target: '> 250 pmol/L for systemic benefits', note: 'Test ~12 hours after a topical/gel application — absorption varies widely person to person.' },
+    { test: 'Progesterone', target: 'Cycle-dependent — discuss timing with your provider', note: 'Micronized progesterone is generally preferred over synthetic progestin for lipid effects.' },
+    { test: 'Total Testosterone', target: '35–45 ng/dL (physiologic range)', note: 'Typical reference range is 2–45 ng/dL; above 70–100 ng/dL is linked to visceral fat gain.' },
+    { test: 'Free Testosterone', target: 'Check even if total looks normal', note: 'Can run low despite a "normal" total testosterone if SHBG is elevated.' },
+    { test: 'SHBG', target: 'Flag with your provider if above 100', note: 'High SHBG can mask a free-testosterone problem.' },
+    { test: 'Free Androgen Index (FAI)', target: 'Calculated from testosterone and SHBG', note: 'Gives a clearer picture than either number alone.' },
+  ];
+
+  const metabolicTests = [
+    { test: 'LDL Cholesterol', target: 'Track the trend, not one number', note: 'Oral estrogen can raise triglycerides; transdermal routes tend to avoid this.' },
+    { test: 'HDL Cholesterol', target: 'Higher is generally better', note: 'Estrogen alone tends to raise HDL; synthetic progestins can blunt the benefit.' },
+    { test: 'Triglycerides', target: 'Watch for spikes after starting oral estrogen', note: 'Transdermal routes typically have less impact here.' },
+    { test: 'ApoB', target: 'Lower is better', note: 'A stronger predictor of cardiovascular risk than LDL alone in many studies.' },
+    { test: 'Lp(a)', target: 'Test once — it’s largely genetic', note: 'A high result changes how aggressively you should manage other lipid markers.' },
+    { test: 'hsCRP', target: 'Lower indicates less systemic inflammation', note: 'Useful as a general inflammation marker alongside the lipid panel.' },
   ];
 
   return (
@@ -126,7 +137,7 @@ export default function HRTDosingPost() {
           </p>
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
             Excess testosterone drives visceral fat accumulation. Visceral fat drives insulin resistance. 
-            Insulin resistance drives lipid dysregulation. It's a cascade, and it starts with a dose that\'s too high.
+            Insulin resistance drives lipid dysregulation. It's a cascade, and it starts with a dose that's too high.
           </p>
 
         {/* The Other Side */}
@@ -148,7 +159,7 @@ export default function HRTDosingPost() {
 
         <div className="rounded-xl p-6 mb-4 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
           <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>Symptom-First Practitioners</div>
-          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85' }}>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85 }}>
             Many doctors prioritize how you feel over lab numbers. If hot flashes are gone, sleep is better, and quality of life improved, 
             they argue the dose is right — regardless of whether estradiol is 60 or 120 pg/mL.
           </p>
@@ -156,14 +167,14 @@ export default function HRTDosingPost() {
 
         <div className="rounded-xl p-6 mb-8 border-l-4" style={{ backgroundColor: 'white', borderLeftColor: '#D4A853' }}>
           <div className="font-bold text-lg mb-2" style={{ color: '#3B2A1A' }}>Cost & Access Reality</div>
-          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85' }}>
+          <p style={{ color: '#3B2A1A', lineHeight: '1.7', opacity: 0.85 }}>
             Comprehensive panels are expensive and not always covered by insurance. For many women, testing SHBG, free testosterone, ApoB, 
             and Lp(a) every 6-8 weeks is financially unrealistic. Symptom-based dosing is pragmatic.
           </p>
         </div>
 
           <p className="mb-4" style={{ color: '#3B2A1A', lineHeight: '1.8' }}>
-            I\'m an AWS architect. I build distributed systems for a living. I know what happens when you don't 
+            I'm an AWS architect. I build distributed systems for a living. I know what happens when you don't
             monitor your systems: they drift, they degrade, and eventually something breaks.
           </p>
           <p className="font-semibold" style={{ color: '#C4622D' }}>
@@ -221,8 +232,8 @@ export default function HRTDosingPost() {
         {/* Sources */}
         <div className="mt-12 pt-8 border-t" style={{ borderColor: '#e8ddd0' }}>
           <p className="text-sm mb-2" style={{ color: '#3B2A1A', opacity: 0.6 }}>
-            <strong>Sources:</strong> Peter Attia MD · Dr. Louise Newson · Kresser Institute · 
-            SWAN Study (Study of Women\'s Health Across the Nation) · Meta-analysis of 73 RCTs (2022) · Hone Health
+            <strong>Sources:</strong> Peter Attia MD · Dr. Louise Newson · Kresser Institute ·
+            SWAN Study (Study of Women's Health Across the Nation) · Meta-analysis of 73 RCTs (2022) · Hone Health
           </p>
           <p className="text-sm" style={{ color: '#3B2A1A', opacity: 0.5 }}>
             I am not a doctor. This is curated research and my personal experience, not medical advice. 
