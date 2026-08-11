@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getPostBySlug } from '@/lib/content'
-import ReactMarkdown from 'react-markdown'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { mdxComponents } from '../mdx-components'
 
 // Force dynamic rendering
 export const dynamic = 'force-dynamic'
@@ -67,7 +68,7 @@ export default async function BlogPost(props: { params: Promise<{ slug: string }
             prose-hr:[border-color:#e8ddd0]
             prose-code:[color:#C4622D]"
         >
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <MDXRemote source={post.content} components={mdxComponents} />
         </div>
 
         {post.tags && post.tags.length > 0 && (
