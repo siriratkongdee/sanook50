@@ -19,6 +19,14 @@ interface Props {
   tags: string[]
 }
 
+const COLORS = {
+  bg: '#FAF4EC',
+  text: '#3B2A1A',
+  green: '#7D9B76',
+  gold: '#D4A853',
+  orange: '#C4622D',
+}
+
 export default function ArticlesClient({ posts, categories, tags }: Props) {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
@@ -28,7 +36,7 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
     return posts.filter(post => {
       if (selectedCategory && post.category !== selectedCategory) return false
       if (selectedTag && !post.tags?.includes(selectedTag)) return false
-      
+
       if (searchQuery) {
         const query = searchQuery.toLowerCase()
         return (
@@ -37,19 +45,23 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
           post.tags?.some(tag => tag.toLowerCase().includes(query))
         )
       }
-      
+
       return true
     })
   }, [posts, searchQuery, selectedCategory, selectedTag])
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-2">Articles</h1>
-        <p className="text-gray-600 mb-8">
-          Expert health insights for women 50+
-        </p>
+    <div className="min-h-screen" style={{ backgroundColor: COLORS.bg }}>
+      <div className="py-16" style={{ backgroundColor: COLORS.bg, borderBottom: `4px solid ${COLORS.green}` }}>
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3" style={{ color: COLORS.text }}>Articles</h1>
+          <p className="text-lg" style={{ color: COLORS.text, opacity: 0.7 }}>
+            Expert health insights for women 50+
+          </p>
+        </div>
+      </div>
 
+      <div className="max-w-6xl mx-auto px-4 py-12">
         {/* Search */}
         <div className="mb-8">
           <input
@@ -57,83 +69,64 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
             placeholder="Search articles..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 rounded-xl border outline-none focus:ring-2"
+            style={{ borderColor: '#e8ddd0', backgroundColor: 'white', color: COLORS.text }}
           />
         </div>
 
         {/* Filters */}
         <div className="mb-8 space-y-4">
-          {/* Categories */}
           {categories.length > 0 && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium mb-2" style={{ color: COLORS.text }}>
                 Category
               </label>
               <div className="flex gap-2 flex-wrap">
-                <button
-                  onClick={() => setSelectedCategory(null)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors $${
-                    selectedCategory === null
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                  }`}
-                >
+                <FilterPill active={selectedCategory === null} onClick={() => setSelectedCategory(null)} color={COLORS.green}>
                   All
-                </button>
+                </FilterPill>
                 {categories.map(cat => (
-                  <button
+                  <FilterPill
                     key={cat}
+                    active={selectedCategory === cat}
                     onClick={() => setSelectedCategory(cat)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium capitalize transition-colors $${
-                      selectedCategory === cat
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-                    }`}
+                    color={COLORS.green}
+                    capitalize
                   >
                     {cat}
-                  </button>
+                  </FilterPill>
                 ))}
               </div>
             </div>
           )}
 
-          {/* Tags */}
           {tags.length > 0 && (
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium mb-2" style={{ color: COLORS.text }}>
                 Topics
               </label>
               <div className="flex gap-2 flex-wrap">
-                <button
-                  onClick={() => setSelectedTag(null)}
-                  className={`px-3 py-1 rounded-full text-xs font-medium transition-colors $${
-                    selectedTag === null
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-                  }`}
-                >
+                <FilterPill active={selectedTag === null} onClick={() => setSelectedTag(null)} color={COLORS.gold} small>
                   All topics
-                </button>
+                </FilterPill>
                 {tags.slice(0, 15).map(tag => (
-                  <button
+                  <FilterPill
                     key={tag}
+                    active={selectedTag === tag}
                     onClick={() => setSelectedTag(tag)}
-                    className={`px-3 py-1 rounded-full text-xs font-medium transition-colors $${
-                      selectedTag === tag
-                        ? 'bg-purple-600 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-                    }`}
+                    color={COLORS.gold}
+                    small
                   >
                     {tag}
-                  </button>
+                  </FilterPill>
                 ))}
               </div>
             </div>
           )}
         </div>
 
-        {/* Results */}
-        <p className="text-sm text-gray-600 mb-6">
+        {/* Results count */}
+        <p className="text-sm mb-6" style={{ color: COLORS.text, opacity: 0.6 }}>
           {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'}
           {searchQuery && ` matching "${searchQuery}"`}
         </p>
@@ -141,58 +134,62 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
         {/* Articles */}
         <div className="space-y-6">
           {filteredPosts.map((post) => (
-            <article
-              key={post.slug}
-              className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow"
-            >
-              <Link href={`/articles/${post.slug}`}>
-                <div>
-                  <div className="flex items-start justify-between mb-2">
-                    <h2 className="text-2xl font-semibold text-gray-900 hover:text-blue-600 flex-1">
-                      {post.title}
-                    </h2>
-                    {post.draft && (
-                      <span className="ml-3 text-sm font-medium text-orange-600 bg-orange-50 px-3 py-1 rounded-full whitespace-nowrap">
-                        DRAFT
-                      </span>
-                    )}
-                  </div>
-                  
-                  {post.category && (
-                    <span className="inline-block text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded capitalize mb-2">
-                      {post.category}
+            <Link key={post.slug} href={`/articles/${post.slug}`}>
+              <article
+                className="rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border"
+                style={{ backgroundColor: 'white', borderColor: '#e8ddd0' }}
+              >
+                <div className="flex items-start justify-between mb-2 gap-3">
+                  <h2 className="text-2xl font-semibold flex-1" style={{ color: COLORS.text }}>
+                    {post.title}
+                  </h2>
+                  {post.draft && (
+                    <span
+                      className="text-sm font-medium px-3 py-1 rounded-full whitespace-nowrap"
+                      style={{ color: COLORS.orange, backgroundColor: '#fff3ec' }}
+                    >
+                      DRAFT
                     </span>
                   )}
-                  
-                  <p className="text-gray-600 mb-3">{post.excerpt}</p>
-                  
-                  <div className="flex items-center justify-between flex-wrap gap-2">
-                    <time className="text-sm text-gray-500">
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
-                    </time>
-                    
-                    {post.tags && post.tags.length > 0 && (
-                      <div className="flex gap-2 flex-wrap">
-                        {post.tags.slice(0, 3).map(tag => (
-                          <span key={tag} className="text-xs text-gray-500">
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
                 </div>
-              </Link>
-            </article>
+
+                {post.category && (
+                  <span
+                    className="inline-block text-xs font-medium px-2 py-1 rounded capitalize mb-2"
+                    style={{ color: COLORS.green, backgroundColor: COLORS.bg }}
+                  >
+                    {post.category}
+                  </span>
+                )}
+
+                <p className="mb-3" style={{ color: COLORS.text, opacity: 0.7 }}>{post.excerpt}</p>
+
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <time className="text-sm" style={{ color: COLORS.text, opacity: 0.5 }}>
+                    {new Date(post.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+
+                  {post.tags && post.tags.length > 0 && (
+                    <div className="flex gap-2 flex-wrap">
+                      {post.tags.slice(0, 3).map(tag => (
+                        <span key={tag} className="text-xs" style={{ color: COLORS.text, opacity: 0.5 }}>
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </article>
+            </Link>
           ))}
 
           {filteredPosts.length === 0 && (
-            <div className="text-center py-12 bg-white rounded-lg">
-              <p className="text-gray-500">
+            <div className="text-center py-12 rounded-2xl" style={{ backgroundColor: 'white' }}>
+              <p style={{ color: COLORS.text, opacity: 0.5 }}>
                 No articles found. Try adjusting your search or filters.
               </p>
             </div>
@@ -200,5 +197,35 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
         </div>
       </div>
     </div>
+  )
+}
+
+function FilterPill({
+  active,
+  onClick,
+  color,
+  children,
+  small,
+  capitalize,
+}: {
+  active: boolean
+  onClick: () => void
+  color: string
+  children: React.ReactNode
+  small?: boolean
+  capitalize?: boolean
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-full font-medium transition-colors ${small ? 'px-3 py-1 text-xs' : 'px-4 py-2 text-sm'} ${capitalize ? 'capitalize' : ''}`}
+      style={
+        active
+          ? { backgroundColor: color, color: 'white' }
+          : { backgroundColor: 'white', color: COLORS.text, border: '1px solid #e8ddd0' }
+      }
+    >
+      {children}
+    </button>
   )
 }
