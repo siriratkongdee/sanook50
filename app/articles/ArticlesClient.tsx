@@ -134,7 +134,7 @@ export default function ArticlesClient({ posts, categories, tags }: Props) {
         {/* Articles */}
         <div className="space-y-6">
           {filteredPosts.map((post) => (
-            <Link key={post.slug} href={`/articles/${post.slug}`}>
+            <Link key={post.slug} href={`/articles/${post.slug}`} className="block">
               <article
                 className="rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border"
                 style={{ backgroundColor: 'white', borderColor: '#e8ddd0' }}
