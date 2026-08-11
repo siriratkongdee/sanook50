@@ -1,13 +1,13 @@
+import { getAllPosts } from "@/lib/content";
+
 export default function Finance() {
-  const articles = [
-    { title: "Why Women 50+ Are Most Exposed to AI Disruption — and What to Do About It", excerpt: "AI is not coming for factory workers first. It is coming for mid-career knowledge workers with high salaries and specialized skills. Here is the honest threat assessment — and the financial moves that create resilience.", emoji: "🤖", tag: "AI + Career", href: "/finance/ai-disruption" },
-    { title: "The Retirement Readiness Checklist: Where Do You Actually Stand?", excerpt: "Most women 50+ have no clear picture of where they stand. Here is the honest framework to assess your situation — and what to do about the gaps.", emoji: "📋", tag: "Planning", href: "/finance/readiness-checklist" },
-    { title: "The Semi-Retirement Math: Working Backwards From Your Number", excerpt: "How much do you actually need? The 4% rule, the healthcare gap, and the real calculation most retirement tools get wrong.", emoji: "🎯", tag: "Retirement", href: "/finance/semi-retire" },
-    { title: "The Wheel Strategy: Getting Paid While You Wait to Buy Stocks", excerpt: "If you want to own a stock anyway, why not collect income while waiting for your price? A practical options strategy for non-traders.", emoji: "🎡", tag: "Options", href: "/finance/wheel-strategy" },
-    { title: "Investing in Your 50s: The Rules Are Different Now", excerpt: "Less time to recover. More capital to protect. Here is the framework for balancing growth and protection with a 5-10 year runway.", emoji: "📊", tag: "Investing", href: "/finance/investing-50s" },
-    { title: "The 5 Financial Decisions That Make or Break Early Retirement", excerpt: "Social Security timing. Healthcare bridge. Asset allocation shift. Tax strategy. These are the levers that actually move the needle — and most people pull them wrong.", emoji: "⚡", tag: "Decisions", href: "/finance/key-decisions" },
-    { title: "What If? Scenarios Every Woman 50+ Should Run Before Retiring", excerpt: "What if markets drop 30%? What if you lose your job? What if you live to 95? Running these scenarios now changes what you do today.", emoji: "🔮", tag: "Scenarios", href: "/finance/what-if" },
-  ];
+  const articles = getAllPosts("finance").map((post) => ({
+    title: post.title,
+    excerpt: post.excerpt,
+    emoji: post.emoji ?? "📝",
+    tag: post.badge ?? post.category,
+    href: `/finance/${post.slug}`,
+  }));
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#FAF4EC" }}>

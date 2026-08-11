@@ -18,7 +18,6 @@ function resolveColor(color?: string): string {
 }
 
 const TEXT = '#3B2A1A';
-const CREAM = '#FAF4EC';
 const BORDER = '#e8ddd0';
 
 /** A bordered callout box — use for "My Take", warnings, or highlighted asides. */
@@ -95,12 +94,15 @@ export function Card({ emoji, title, children }: { emoji?: string; title: string
 /** A full-bleed colored box for a closing call-to-action, e.g. "One Action to Take". */
 export function ActionBox({ title, color = 'green', children }: { title: string; color?: string; children: ReactNode }) {
   const resolved = resolveColor(color);
+  // Gold is too light for white text to stay readable — use dark text on that background instead.
+  const isLight = resolved === COLOR_TOKENS.gold;
+  const fg = isLight ? TEXT : 'white';
   return (
     <div className="not-prose rounded-xl p-8 text-center my-10" style={{ backgroundColor: resolved }}>
-      <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-      <div className="text-white" style={{ opacity: 0.9 }}>
-        {children}
-      </div>
+      <h3 className="text-xl font-bold mb-3" style={{ color: fg }}>
+        {title}
+      </h3>
+      <div style={{ color: fg, opacity: isLight ? 1 : 0.9 }}>{children}</div>
     </div>
   );
 }

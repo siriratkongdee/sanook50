@@ -13,6 +13,9 @@ export interface Post {
   draft: boolean
   category?: string
   tags?: string[]
+  emoji?: string
+  badge?: string
+  readTime?: string
 }
 
 export function getAllPosts(category?: string): Post[] {
@@ -46,7 +49,10 @@ export function getAllPosts(category?: string): Post[] {
         content,
         draft: folder === 'drafts',
         category: data.category,
-        tags: data.tags || []
+        tags: data.tags || [],
+        emoji: data.emoji,
+        badge: data.badge,
+        readTime: data.readTime,
       }
 
       // Filter by category if specified
@@ -77,7 +83,10 @@ export function getPostBySlug(slug: string): Post | null {
         content,
         draft: folder === 'drafts',
         category: data.category,
-        tags: data.tags || []
+        tags: data.tags || [],
+        emoji: data.emoji,
+        badge: data.badge,
+        readTime: data.readTime,
       }
     }
   }

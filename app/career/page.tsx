@@ -1,12 +1,13 @@
+import { getAllPosts } from "@/lib/content";
+
 export default function Career() {
-  const articles = [
-    { title: "Why Women 50+ Are in AI Crosshairs (And How to Get Out)", excerpt: "The specific threat profile, which roles are most at risk, the salary paradox, and the action plan to shift from target to asset.", emoji: "🎯", tag: "AI Risk", href: "/career/ai-crosshairs" },
-    { title: "I Built My Own AI Team. Here Is What Changed.", excerpt: "How building an AI agent setup transformed daily productivity — what it handles, what it took to set up, and how to start building yours.", emoji: "🤖", tag: "Productivity", href: "/career/ai-team" },
-    { title: "The Skills That Make You AI-Proof After 50", excerpt: "Not 'learn to code.' Specific, doable skills: prompt engineering, agent workflows, domain expertise plus AI, and building a second income stream with AI tools.", emoji: "🛡️", tag: "Skills", href: "/career/ai-proof-skills" },
-    { title: "Negotiating Salary After 50: Yes, You Can and Should", excerpt: "Age bias is real but so is your leverage. Here is how to negotiate confidently at every stage.", emoji: "💼", tag: "Negotiation", href: "/career/negotiating" },
-    { title: "From Employee to Consultant: Making the Leap", excerpt: "Consulting can provide freedom, flexibility and often higher pay. Here is how to make the transition strategically.", emoji: "🚀", tag: "Consulting", href: "/career/consulting" },
-    { title: "Building a Personal Brand After 50", excerpt: "Why your story and expertise matter more than ever — and how to share them in the age of AI and social media.", emoji: "✨", tag: "Branding", href: "/career/personal-brand" },
-  ];
+  const articles = getAllPosts("career").map((post) => ({
+    title: post.title,
+    excerpt: post.excerpt,
+    emoji: post.emoji ?? "📝",
+    tag: post.badge ?? post.category,
+    href: `/career/${post.slug}`,
+  }));
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#FAF4EC' }}>
